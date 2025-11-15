@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>(주)일건</title>
   <meta name="description" content="기계설비, 배관공사, 냉난방시스템 전문 시공업체">
-  <link rel="stylesheet" href="index.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -15,15 +16,15 @@
   <!-- HEADER -->
   <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top big-navbar">
     <div class="container">
-      <a class="navbar-brand fw-bold fs-3" href="#">(주)일건</a>
+      <img src="Imgs/메인/일건로그(배경없는 png).png" alt="Logo" width=" 60px"  class="img-logo">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <nav class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
-          <li class="nav-item"><a href="#about" class="nav-link">회사소개 / 사업분야</a></li>
-          <li class="nav-item"><a href="#service" class="nav-link">기계설비</a></li>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
+          <li class="nav-item"><a href="#about" class="nav-link">회사소개</a></li>
+          <li class="nav-item"><a href="기계설비.html" class="nav-link">기계설비</a></li>
           <li class="nav-item"><a href="#equipment" class="nav-link">정보통신설비</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">문의하기</a></li>
         </ul>
@@ -34,21 +35,38 @@
   <!-- MAIN VISUAL -->
   <section id="main-visual" class="d-flex align-items-center text-center text-white">
     <div class="container">
-      <h1 class="display-4 fw-bold">정확한 기술, 믿을 수 있는 품질</h1>
-      <p class="lead mt-3">기계설비 · 정보통신설비 전문기업</p>
+      <h1 class="display-4 fw-bold">기계설비 · 정보통신설비 전문기업</h1>
+      <p class="lead mt-3">정확한 기술, 믿을 수 있는 품질</p>
       <a href="#contact" class="btn btn-light btn-lg mt-4">상담문의</a>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4 fw-bold">회사소개</h2>
-      <p class="text-muted">
-        (주)일건은 정확한 기술력과 열정으로 기계설비 성능점검 및 유지관리 / 정보통신 설비 성능점검 및 유지 관리를 진행하고 있습니다.
-      </p>
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- 왼쪽: 이미지 -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="Imgs/메인/간판.png" alt="회사 건물 이미지" class="img-fluid rounded">
+      </div>
+
+      <!-- 오른쪽: 텍스트 -->
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-4">기계설비 / 정보통신설비 / 성능점검 전문기업</h2>
+        <p class="text-muted mb-4">
+          당사는 기계설비 설계, 시공, 시운전, 유지관리 등 다양한 경력 소유자 참여로
+          성능점검에 의한 문제점 발생 시 개선책을 제시하여 에너지 자원을 환수하고
+          최고의 운전 효율을 유지하도록 최상의 기술 서비스를 제공하여
+          고객의 믿음과 사랑을 받는 (주)일건이 되도록 노력하겠습니다.
+        </p>
+        <a href="#service" class="btn btn-outline-dark px-4 py-2">회사소개 바로가기</a>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- SERVICES -->
   <section id="service" class="py-5 bg-light">
@@ -64,14 +82,14 @@
         </div>
         <div class="col-md-3">
           <div class="service-box">
-            <i class="fa-solid fa-temperature-high fa-3x mb-3"></i>
+            <i class="fa-solid fa-tower-observation fa-3x mb-3"></i>
             <h5>정보통신설비</h5>
             <p>정보통신 성능점검 및 유지관리</p>
           </div>
         </div>
         <div class="col-md-3">
           <div class="service-box">
-            <i class="fa-solid fa-industry fa-3x mb-3"></i>
+            <i class="fa-solid fa-building-shield fa-3x mb-3"></i>
             <h5>정보통신 기기 설치</h5>
             <p>CCTV 설치 등</p>
           </div>
@@ -79,7 +97,7 @@
         <div class="col-md-3">
           <div class="service-box">
             <i class="fa-solid fa-screwdriver-wrench fa-3x mb-3"></i>
-            <h5>유지보수</h5>
+            <h5>성능점검</h5>
             <p>기존 설비의 점검 및 교체 서비스</p>
           </div>
         </div>
@@ -87,22 +105,11 @@
     </div>
   </section>
 
-  <!-- EQUIPMENT -->
-  <section id="equipment" class="py-5">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-5">보유장비</h2>
-      <div class="row g-4">
-        <div class="col-md-4"><img src="img/equipment1.jpg" class="img-fluid rounded shadow"></div>
-        <div class="col-md-4"><img src="img/equipment2.jpg" class="img-fluid rounded shadow"></div>
-        <div class="col-md-4"><img src="img/equipment3.jpg" class="img-fluid rounded shadow"></div>
-      </div>
-    </div>
-  </section>
 
   <!-- CONTACT -->
   <section id="contact" class="py-5 bg-dark text-white">
     <div class="container text-center">
-      <h2 class="fw-bold mb-4">상담문의</h2>
+      <h2 class="contact-1 fw-bold mb-4">상담문의</h2>
       <p class="lead mb-3">📞 010-2435-1136| ☎ 043-212-1136</p>
       <p>평일/주말 08:00 ~ 20:00<br>정성을 다해 상담해 드리겠습니다.</p>
       <a href="mailto:info@ilgunsys.co.kr" class="btn btn-outline-light mt-3">이메일 문의</a>

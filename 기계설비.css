@@ -1,0 +1,159 @@
+기본 폰트 및 색상
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+}
+/* 내 작업 */
+
+
+/* 큰 네비게이션 바 */
+.big-navbar {
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+.big-navbar .container {
+  padding-left: 80px;
+  padding-right: 40px;
+}
+
+
+.big-navbar .nav-link {
+  font-weight: 600;
+  color: #222222 !important;
+}
+.big-navbar .nav-link:hover {
+  color: #0078ff !important;
+}
+.navbar-nav .nav-item {
+  margin-right: 20px; /* 각 메뉴 사이 여백 */
+}
+.navbar-nav .nav-item:last-child {
+  margin-right: 0; /* 마지막 메뉴는 여백 제거 */
+}
+/* 메인사진 */
+.main-p {
+  text-align: center; /* 이미지를 수평 중앙 정렬 */
+  margin-top: 50px;
+}
+.main-p img {
+  display: inline-block; /* text-align이 적용되도록 */
+
+}
+.main-pp
+{
+    margin-top: 30px;
+}
+/* 푸터 */
+footer {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+
+/* 법령 표 섹션 */
+.law-section {
+  background-color: #ffffff; /* 은은한 배경 */
+  padding: 100px 20px;
+}
+
+.text-primary {
+    --bs-text-opacity: 1;
+    color: rgb(17, 77, 166) !important;
+}
+.law-section h3 {
+  color: #002b5b;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.law-section h3::after {
+  content: '';
+  display: block;
+  width: 35%;
+  height: 4px;
+  background: linear-gradient(90deg, #0078ff, #00d4ff);
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+.law-section p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+/* 표 스타일 */
+.table-dark-blue {
+  background-color: #002b5b !important;
+  color: #fff;
+}
+
+.custom-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-size: 1.1rem;
+}
+
+.custom-table th,
+.custom-table td {
+  vertical-align: middle;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.3s ease;
+}
+
+.custom-table th {
+  background-color: #002b5b;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.custom-table td {
+  color: #222;
+  text-align: center;
+}
+
+.custom-table tr:hover td {
+  background-color: #f1f8ff;
+}
+
+/* 하위 제목 스타일 */
+.table-subhead {
+  background-color: #e6f0ff;
+  font-weight: 700;
+  color: #002b5b;
+  font-size: 1.15rem;
+}
+.container-main {
+  width: 80%;
+  margin: 0 auto;  /* 중앙 정렬 */
+  text-align: center; /* 내부 텍스트도 가운데 정렬 */
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .law-section {
+    padding: 60px 10px;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    padding: 12px 10px;
+    font-size: 1rem;
+  }
+}
