@@ -8,7 +8,7 @@ body {
 
 /* 큰 네비게이션 바 */
 .big-navbar {
-  padding: 15px;
+  padding: 25px;
   transition: all 0.3s ease;
 }
 .big-navbar .container {
@@ -36,7 +36,7 @@ body {
   background: url('Imgs/메인/example.jpg') center center / cover no-repeat;
   height: 90vh; /* 화면 높이의 90% */
   position: relative;
-  margin-top: 120px;
+  margin-top: 103px;
 }
 /* 서비스 아이콘 박스 */
 .service-box {

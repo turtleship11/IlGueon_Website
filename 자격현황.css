@@ -37,46 +37,6 @@ footer {
 }
 
 
-.intro {
-background: #ffffff;
-padding: 100px 50px;
-text-align: center;
-}
-
-
-.intro h3 {
-color: #002b5b;
-font-size: 2.4rem;
-font-weight: 800;
-margin-bottom: 35px;
-}
-
-
-.intro h3::after {
-content: "";
-display: block;
-width: 60%;
-height: 4px;
-background: linear-gradient(90deg, #002b5b, #005bbb);
-margin: 12px auto 0 auto;
-border-radius: 4px;
-}
-
-.intro p {
-font-size: 1.2rem;
-line-height: 1.9;
-color: #333;
-max-width: 1000px;
-margin: 0 auto;
-background: #f7faff;
-padding: 40px 35px;
-border-radius: 18px;
-box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-border-left: 6px solid #002b5b;
-}
-
-
-
 .sidebar {
   position: relative; /* fixed 제거 */
   top: auto;
@@ -108,15 +68,68 @@ section {
   scroll-margin-top: 80px; /* anchor 이동 시 offset 처리 */
 }
 
-.main-1{
+.main-1 {
     display: flex;
+    flex-direction: row; /* 기존 기본값 */
     margin-top: 103px;
 }
-.vision
-{
-  margin-top: 20px;
+/* 사진 */
+.certi img{
+  width: 80%;
+  margin: 0px auto;
+  display: block;
 }
-.first-p
-{
-  margin-top: 100px;
+
+/* 사업분야 디자인 */
+.field {
+flex: 1;
+padding: 60px 80px;
+background: #ffffff;
+}
+
+
+.field-title {
+font-size: 2rem;
+font-weight: 800;
+margin-bottom: 30px;
+color: #001f54;
+text-align: center;
+}
+
+
+.biz-grid {
+display: block;
+}
+
+
+.biz-card {
+background: linear-gradient(145deg, #ffffff 0%, #e8edf7 40%, #d4dced 100%);
+padding: 30px;
+border-radius: 18px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+transition: 0.35s;
+border-left: 6px solid #001f54;
+margin-bottom: 25px;
+}
+.biz-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+background: linear-gradient(145deg, #f5f7fc 0%, #dde4f1 45%, #c7d3e8 100%);
+}
+.biz-card h3 {
+font-size: 1.4rem;
+font-weight: 700;
+margin-bottom: 12px;
+}
+.biz-card p {
+font-size: 1rem;
+color: #555;
+line-height: 1.6;
+}
+
+
+/* 카드 공통 스타일 (추가) */
+.biz-card {
+background: linear-gradient(135deg, #ffffff, #e6ecf5);
+border-left: 6px solid #001f54;
 }

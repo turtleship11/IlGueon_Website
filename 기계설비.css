@@ -8,7 +8,7 @@ body {
 
 /* 큰 네비게이션 바 */
 .big-navbar {
-  padding: 15px;
+  padding: 25px;
   transition: all 0.3s ease;
 }
 .big-navbar .container {
