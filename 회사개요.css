@@ -59,7 +59,88 @@ hr{
   font-weight: bold;
   color: #0d6efd;
 }
+.sidebar {
+  position: relative; /* fixed 제거 */
+  top: auto;
+  left: auto;
+  height: auto;
+  padding:50px;
+  background-color: #ffffff;
+  min-width: 250px;
+  width: 300px;
+}
+.sidebar-title
+{
+    font-size: x-large;
+}
+hr{
+    margin: 10px 0 10px 0;
+}
+.sidebar .nav-link {
+  color: #333;
+  margin-bottom: 10px;
+}
 
+.sidebar .nav-link.active {
+  font-weight: bold;
+  color: #0d6efd;
+}
+/* nav-link 공통 */
+.sidebar .nav-link {
+  position: relative;
+  display: block;
+  padding: 12px 5px;
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* hover 시 글자색 그대로 (변경 없음) */
+.sidebar .nav-link:hover {
+  color: #444 !important; 
+}
+
+/* 밑줄 기본 상태 = 없음 */
+.sidebar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #005bbb, #00aaff);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+/* hover 시 밑줄만 나타남 */
+.sidebar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE (현재 메뉴)
+   → 색상만 진하게, 밑줄 없음 */
+.sidebar .nav-link.active {
+  color: #005bbb;
+  font-weight: 700;
+}
+
+/* active 메뉴는 밑줄 없음 (초기화) */
+.sidebar .nav-link.active::after {
+  width: 0 !important;
+}
+
+
+/* 섹션 공통 보정 */
+section {
+  scroll-margin-top: 80px; /* anchor 이동 시 offset 처리 */
+}
+
+.main-1{
+    display: flex;
+    margin-top: 20px;
+}
 /* section 배경 */
 .company-overview {
   max-width: 900px;
@@ -167,14 +248,11 @@ hr{
   }
 }
 
-
-
 /* 섹션 공통 보정 */
 section {
   scroll-margin-top: 80px; /* anchor 이동 시 offset 처리 */
 }
-
-.main-1{
-    display: flex;
-    margin-top: 103px;
+.first-p
+{
+  margin-top: 100px;
 }
