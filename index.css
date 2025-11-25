@@ -57,7 +57,7 @@ h2 {
 
 /* 어바웃 */
 #about {
-  background-color: #f8f9fa;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
   padding: 100px 50px 100px 50px;
 }
 #about img {
@@ -147,11 +147,6 @@ footer {
   font-size: 0.85rem;
 }
 
-/* index.css 에 추가할 스타일 */
-
-/* 남색 톤을 맞추기 위한 Bootstrap 기본 색상 재정의 또는 사용 (선택 사항) */
-/* Bootstrap 5에서 text-dark는 일반적으로 #212529 입니다. */
-/* text-info는 하늘색 계열로 남색과 대비되어 깔끔합니다. */
 
 /* APP/QR SYSTEM 섹션의 이미지 스타일 */
 #app-system .app-image-style {
@@ -180,4 +175,76 @@ footer {
   padding: 2px 6px;          /* 약간의 여백 */
   border-radius: 4px;        /* 모서리 둥글게 */
   font-weight: bold;          /* 글자 굵게 */
+}
+
+/* ================= 인증현황 섹션 스타일 ================= */
+.cert-section {
+    padding: 70px 30px;
+background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  background-attachment: fixed;
+}
+
+/* 카드 스타일 */
+.cert-card {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    height: 600px;
+    border-radius: 22px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    background-size: 80% auto;;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+/* 카드 호버 효과 */
+.cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* 카드 텍스트 오버레이 */
+.cert-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(255,255,255,0.85);
+    border-radius: 0 0 22px 22px;
+    padding: 15px 10px;
+}
+
+.cert-card-overlay h5 {
+    color: #1f3b64;
+    margin-bottom: 5px;
+}
+
+.cert-card-overlay p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* 카드 배경 이미지 */
+.bg-cert1 {
+    background-image: url('Imgs/메인/서류/중소기업확인서(일건).png');
+}
+
+.bg-cert2 {
+    background-image: url('Imgs/메인/서류/사업자등록증(일건).png');
+}
+
+.bg-cert3 {
+    background-image: url('Imgs/메인/서류/기계설비등록증(일건).png');
+}
+
+/* 반응형 */
+@media (max-width: 992px) {
+    .cert-card { height: 340px; }
+}
+
+@media (max-width: 576px) {
+    .cert-card { height: 280px; }
 }

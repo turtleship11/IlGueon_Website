@@ -3,6 +3,7 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   color: #333;
 }
+/* 내 작업 */
 
 
 /* 큰 네비게이션 바 */
@@ -29,52 +30,137 @@ body {
 .navbar-nav .nav-item:last-child {
   margin-right: 0; /* 마지막 메뉴는 여백 제거 */
 }
+.sidebar-contact {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+.sidebar-contact p {
+  margin: 0;
+}
+
 /* 푸터 */
 footer {
   font-size: 0.9rem;
   line-height: 1.5;
 }
-.sidebar {
-  position: relative; /* fixed 제거 */
-  top: auto;
-  left: auto;
-  height: auto;
-  padding:50px;
-  background-color: #ffffff;
-  width: 300px;
+/* main-p */
+.first-p {
+position: relative;
+width: 100%;
+  margin-top: 100px;
 }
-.sidebar-title
-{
-    font-size: large;
+.first-p img {
+width: 100%;
+
+object-fit: cover;
 }
-hr{
-    margin: 10px 0 10px 0;
-}
-.sidebar .nav-link {
-  color: #333;
-  margin-bottom: 10px;
+.first-p .center-title {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #fff;
+font-size: 48px;
+font-weight: bold;
+letter-spacing: 2px;
+padding: 10px 30px;
+border-radius: 10px;
 }
 
-.sidebar .nav-link.active {
-  font-weight: bold;
-  color: #0d6efd;
+.intro {
+  background: #ffffff;
+  padding: 100px 50px;
+  text-align: center;
+  margin-left: 100px;
 }
+
+.intro h3 {
+  color: #002b5b;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 35px;
+}
+
+.intro h3::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, #002b5b, #005bbb);
+  margin: 12px auto 0 auto;
+  border-radius: 4px;
+}
+
+/* 첫 번째 강조 카드 */
+.highlight {
+  background: #f0f8ff;
+  padding: 30px 25px;
+  margin: 0 auto 70px auto;
+  max-width: 900px;
+  border-left: 6px solid #005bbb;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #002b5b;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* 전체 인사말 자연스럽게 */
+.full-message-natural {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #333;
+  padding: 0; /* 배경색/패딩 제거 */
+}
+
+/* 문단 간 여백 */
+.full-message-natural p {
+  margin-bottom: 20px;
+}
+
+
+/* 이미지 섹션 */
+.vision img {
+  margin-top: 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+
 .sidebar {
-  position: relative; /* fixed 제거 */
+  position: relative;
   top: auto;
-  left: auto;
-  height: auto;
-  padding:50px;
-  background-color: #ffffff;
+  left: 50px;
+  height: 600px;
+  padding: 40px;
   min-width: 250px;
   width: 300px;
+
+  background: linear-gradient(
+    180deg,
+    #e9efff 0%,
+    #dce7ff 40%,
+    #a6bde9 100%
+  );
 }
+
 .sidebar-title
 {
     font-size: x-large;
 }
 hr{
+  opacity: 1 !important;
     margin: 10px 0 10px 0;
+    border: 0;
+  height: 3px;  /* 두께 증가 */
+  background: linear-gradient(90deg, #002b5b, #005bbb, #0078ff);
+  border-radius: 4px;
 }
 .sidebar .nav-link {
   color: #333;
@@ -116,7 +202,7 @@ hr{
 
 /* hover 시 밑줄만 나타남 */
 .sidebar .nav-link:hover::after {
-  width: 100%;
+  width: 70%;
 }
 
 /* ACTIVE (현재 메뉴)
@@ -131,128 +217,93 @@ hr{
   width: 0 !important;
 }
 
-
-/* 섹션 공통 보정 */
-section {
-  scroll-margin-top: 80px; /* anchor 이동 시 offset 처리 */
-}
-
-.main-1{
-    display: flex;
-    margin-top: 20px;
-}
-/* section 배경 */
+/* company-overview 세련된 스타일 */
 .company-overview {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 40px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
+background: linear-gradient(180deg, #f4f7fb, #ffffff);
+padding: 70px 30px;
+/* ✅ 사이드바 바로 옆에 붙도록 위치 조정 */
+margin-left: 260px; /* 사이드바 너비에 맞춰 조정 */
 }
 
-/* 제목 */
-.company-overview .overview-title {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #1e3c72;
-  position: relative;
+
+.overview-title {
+font-size: 30px;
+font-weight: 700;
+text-align: left;
+margin-bottom: 40px;
+letter-spacing: -1px;
+position: relative;
 }
 
-.company-overview .overview-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #1e3c72;
-  margin: 10px auto 0;
-  border-radius: 2px;
+
+.overview-title::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -12px;
+width: 70px;
+height: 4px;
+background: linear-gradient(90deg, #0d6efd, #5aa3ff);
+border-radius: 50px;
 }
 
-/* Flex 컨테이너 */
+
 .overview-flex {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap; /* 화면 좁으면 세로 배치 */
+display: flex;
+justify-content: flex-start;
 }
 
-/* 표 스타일 */
+
 .company-table {
-  width: 100%;
-  max-width: 500px;
-  border-collapse: collapse;
-  background: linear-gradient(135deg, #1e3c72, #2a5298); /* 남색 그라데이션 */
-  color: #ffffff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+width: 100%;
+max-width: 900px;
+background: #ffffff;
+border-radius: 18px;
+overflow: hidden;
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+border-collapse: collapse;
 }
 
-.company-table:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+
+.company-table tr {
+transition: background 0.3s ease;
 }
 
-.company-table th,
-.company-table td {
-  padding: 20px;
-  font-size: 1.2rem;
+
+.company-table tr:hover {
+background: #f5f9ff;
 }
+
 
 .company-table th {
-  text-align: left;
-  font-weight: 700;
-  width: 35%;
-  background: rgba(255,255,255,0.15);
+width: 30%;
+padding: 18px 20px;
+background: #f0f4ff;
+color: #222;
+font-weight: 600;
+border-bottom: 1px solid #e3e8f0;
 }
+
 
 .company-table td {
-  text-align: left;
-  background: rgba(255,255,255,0.05);
+padding: 18px 20px;
+color: #555;
+border-bottom: 1px solid #e3e8f0;
+line-height: 1.7;
 }
 
-/* 행 호버 */
-.company-table tr:hover td {
-  background: rgba(255,255,255,0.2);
+
+.company-table tr:last-child th,
+.company-table tr:last-child td {
+border-bottom: none;
 }
 
-/* 이미지 */
-.company-photo {
-  flex: 1;
-  text-align: center;
-}
 
-.company-photo img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.company-photo img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-}
-
-/* 반응형 */
 @media (max-width: 768px) {
-  .overview-flex {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .company-table, .company-photo img {
-    max-width: 100%;
-  }
+.company-overview {
+padding: 40px 15px;
+margin-left: 0; /* 모바일에서는 사이드바 영향 제거 */
 }
-
-/* 섹션 공통 보정 */
-section {
-  scroll-margin-top: 80px; /* anchor 이동 시 offset 처리 */
+.overview-title {
 }
-.first-p
-{
-  margin-top: 100px;
 }
