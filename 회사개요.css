@@ -3,9 +3,6 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   color: #333;
 }
-/* 내 작업 */
-
-
 /* 큰 네비게이션 바 */
 .big-navbar {
   padding: 25px;
@@ -15,7 +12,6 @@ body {
   padding-left: 80px;
   padding-right: 40px;
 }
-
 
 .big-navbar .nav-link {
   font-weight: 600;
@@ -67,71 +63,6 @@ letter-spacing: 2px;
 padding: 10px 30px;
 border-radius: 10px;
 }
-
-.intro {
-  background: #ffffff;
-  padding: 100px 50px;
-  text-align: center;
-  margin-left: 100px;
-}
-
-.intro h3 {
-  color: #002b5b;
-  font-size: 2.4rem;
-  font-weight: 800;
-  margin-bottom: 35px;
-}
-
-.intro h3::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 4px;
-  background: linear-gradient(90deg, #002b5b, #005bbb);
-  margin: 12px auto 0 auto;
-  border-radius: 4px;
-}
-
-/* 첫 번째 강조 카드 */
-.highlight {
-  background: #f0f8ff;
-  padding: 30px 25px;
-  margin: 0 auto 70px auto;
-  max-width: 900px;
-  border-left: 6px solid #005bbb;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #002b5b;
-  line-height: 1.8;
-  font-style: italic;
-}
-
-/* 전체 인사말 자연스럽게 */
-.full-message-natural {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.9;
-  color: #333;
-  padding: 0; /* 배경색/패딩 제거 */
-}
-
-/* 문단 간 여백 */
-.full-message-natural p {
-  margin-bottom: 20px;
-}
-
-
-/* 이미지 섹션 */
-.vision img {
-  margin-top: 50px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
 
 .sidebar {
   position: relative;
@@ -217,93 +148,86 @@ hr{
   width: 0 !important;
 }
 
-/* company-overview 세련된 스타일 */
-.company-overview {
-background: linear-gradient(180deg, #f4f7fb, #ffffff);
-padding: 70px 30px;
-/* ✅ 사이드바 바로 옆에 붙도록 위치 조정 */
-margin-left: 260px; /* 사이드바 너비에 맞춰 조정 */
+/* 플렉스 */
+.main-1{
+  display: flex;
 }
 
-
-.overview-title {
-font-size: 30px;
-font-weight: 700;
-text-align: left;
-margin-bottom: 40px;
-letter-spacing: -1px;
-position: relative;
+.intro {
+  background: #ffffff;
+  padding: 100px 50px;
+  text-align: center;
+  margin-left: 100px;
 }
 
-
-.overview-title::after {
-content: "";
-position: absolute;
-left: 0;
-bottom: -12px;
-width: 70px;
-height: 4px;
-background: linear-gradient(90deg, #0d6efd, #5aa3ff);
-border-radius: 50px;
+.intro h3 {
+  color: #002b5b;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 35px;
 }
 
-
-.overview-flex {
-display: flex;
-justify-content: flex-start;
-}
-
-
+/* 회사개요 테이블 스타일 */
 .company-table {
-width: 100%;
-max-width: 900px;
-background: #ffffff;
-border-radius: 18px;
-overflow: hidden;
-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+  background: transparent;
 }
-
-
-.company-table tr {
-transition: background 0.3s ease;
-}
-
-
-.company-table tr:hover {
-background: #f5f9ff;
-}
-
 
 .company-table th {
-width: 30%;
-padding: 18px 20px;
-background: #f0f4ff;
-color: #222;
-font-weight: 600;
-border-bottom: 1px solid #e3e8f0;
+  width: 30%;
+  text-align: left;
+  padding: 15px 10px;
+  font-weight: 700;
+  color: #002b5b;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
-
 
 .company-table td {
-padding: 18px 20px;
-color: #555;
-border-bottom: 1px solid #e3e8f0;
-line-height: 1.7;
+  padding: 15px 10px;
+  color: #333;
+  line-height: 1.7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-
-.company-table tr:last-child th,
-.company-table tr:last-child td {
-border-bottom: none;
-}
-
-
+/* 모바일 대응 */
 @media (max-width: 768px) {
-.company-overview {
-padding: 40px 15px;
-margin-left: 0; /* 모바일에서는 사이드바 영향 제거 */
+  .company-table th,
+  .company-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .company-table th {
+    background: #eef4ff;
+  }
 }
-.overview-title {
+/* 첫 번째 강조 카드 */
+.highlight {
+  background: #f0f8ff;
+  padding: 30px 25px;
+  margin: 0 auto 70px auto;
+  max-width: 600px;
+  border-left: 6px solid #005bbb;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #002b5b;
+  line-height: 1.8;
+  font-style: normal;
 }
+.full-message-natural {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #333;
+  padding: 0; /* 배경색/패딩 제거 */
+}
+.highlight table {
+  margin: 0 auto; /* 테이블 가로 중앙 */
+  font-style: normal; /* 글씨 기울기 해제 */
 }

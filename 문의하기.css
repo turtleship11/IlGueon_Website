@@ -1,0 +1,131 @@
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+}
+/* 내 작업 */
+
+
+/* 큰 네비게이션 바 */
+.big-navbar {
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+.big-navbar .container {
+  padding-left: 80px;
+  padding-right: 40px;
+}
+
+
+.big-navbar .nav-link {
+  font-weight: 600;
+  color: #222222 !important;
+}
+.big-navbar .nav-link:hover {
+  color: #0078ff !important;
+}
+.navbar-nav .nav-item {
+  margin-right: 20px; /* 각 메뉴 사이 여백 */
+}
+.navbar-nav .nav-item:last-child {
+  margin-right: 0; /* 마지막 메뉴는 여백 제거 */
+}
+/* 메인사진 */
+.main-p {
+  text-align: center; /* 이미지를 수평 중앙 정렬 */
+  margin-top: 50px;
+}
+.main-p img {
+  display: inline-block; /* text-align이 적용되도록 */
+
+}
+.main-pp
+{
+    margin-top: 30px;
+}
+/* 푸터 */
+footer {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .law-section {
+    padding: 60px 10px;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    padding: 12px 10px;
+    font-size: 1rem;
+  }
+}
+
+/* 사진 */
+#gallery img {
+  width: 100%;
+  height: 300px; /* 필요에 따라 높이 조정 가능 */
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease;
+}
+/* py-5 패딩-bottom 제거 */
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+
+/* 메인 비주얼 내부 카드 영역 */
+#main-visual .services-panel {
+  max-width: 1100px;
+   transform: translateY(100px);
+}
+
+/* 카드 스타일 - 글래스모피즘 느낌 */
+#main-visual .service-box {
+  background: rgba(255, 255, 255, 0.25); /* 반투명 */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 25px 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+/* 문의하기 섹션 */
+#contact {
+  background: #f8f9fa;
+}
+
+#contact h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+#contact form .form-control {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+#contact form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+#contact button.btn {
+  border-radius: 50px;
+  padding: 10px 40px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+#contact button.btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-2px);
+}

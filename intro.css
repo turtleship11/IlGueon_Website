@@ -16,7 +16,6 @@ body {
   padding-right: 40px;
 }
 
-
 .big-navbar .nav-link {
   font-weight: 600;
   color: #222222 !important;
@@ -82,16 +81,6 @@ border-radius: 10px;
   margin-bottom: 35px;
 }
 
-.intro h3::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 4px;
-  background: linear-gradient(90deg, #002b5b, #005bbb);
-  margin: 12px auto 0 auto;
-  border-radius: 4px;
-}
-
 /* 첫 번째 강조 카드 */
 .highlight {
   background: #f0f8ff;
@@ -124,15 +113,7 @@ border-radius: 10px;
   margin-bottom: 20px;
 }
 
-
-/* 이미지 섹션 */
-.vision img {
-  margin-top: 50px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-
+/* 사이드바 */
 .sidebar {
   position: relative;
   top: auto;
@@ -182,27 +163,12 @@ hr{
   transition: all 0.25s ease;
 }
 
-/* hover 시 글자색 그대로 (변경 없음) */
 .sidebar .nav-link:hover {
-  color: #444 !important; 
+  color: #463eee !important;
+  transform: scale(1.02);
 }
-
-/* 밑줄 기본 상태 = 없음 */
-.sidebar .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 2px;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #005bbb, #00aaff);
-  transition: width 0.3s ease;
-  border-radius: 2px;
-}
-
-/* hover 시 밑줄만 나타남 */
 .sidebar .nav-link:hover::after {
-  width: 70%;
+  color: #0d6efd;
 }
 
 /* ACTIVE (현재 메뉴)
@@ -210,11 +176,6 @@ hr{
 .sidebar .nav-link.active {
   color: #005bbb;
   font-weight: 700;
-}
-
-/* active 메뉴는 밑줄 없음 (초기화) */
-.sidebar .nav-link.active::after {
-  width: 0 !important;
 }
 
 
@@ -231,3 +192,50 @@ section {
   margin-top: 20px;
 }
 
+.company-overview-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 25px;
+}
+
+.overview-block {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #e6f0ff 0%, #d0e0ff 100%);
+  padding: 20px 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overview-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.block-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #005bbb;
+  margin-bottom: 8px;
+}
+
+.block-content {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* 반응형: 모바일에서 항목 간격 유지 */
+@media (max-width: 768px) {
+  .company-overview-blocks {
+    gap: 15px;
+  }
+  .overview-block {
+    padding: 18px 20px;
+  }
+}
