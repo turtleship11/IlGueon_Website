@@ -24,7 +24,7 @@
 
       <nav class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
-          <li class="nav-item"><a href="intro.html" class="nav-link">회사소개</a></li>
+          <li class="nav-item"><a href="intro/intro.html" class="nav-link">회사소개</a></li>
           <li class="nav-item"><a href="기계설비.html" class="nav-link">기계설비</a></li>
           <li class="nav-item"><a href="#equipment" class="nav-link">정보통신설비</a></li>
           <li class="nav-item"><a href="문의하기.html" class="nav-link">문의하기</a></li>
@@ -224,19 +224,29 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 <script>
-  const swiper = new Swiper('.gallerySwiper', 
-  {
-    slidesPerView: 3,      // 한 화면에 3장
-    spaceBetween: 0,        // 사진 간 간격 제거
-    loop: true,             // 무한 반복
+  const swiper = new Swiper('.gallerySwiper', {
+    loop: true,
     autoplay: {
-      delay: 2500,          // 2.5초마다 슬라이드
+      delay: 2500,
       disableOnInteraction: false,
-      pauseOnMouseEnter: false,    // 추가
+      pauseOnMouseEnter: false,
     },
+    spaceBetween: 0,
+
+    /* 반응형 설정 */
+    breakpoints: {
+      0: {          // 모바일
+        slidesPerView: 1,
+      },
+      768: {        // 태블릿
+        slidesPerView: 2,
+      },
+      992: {        // PC
+        slidesPerView: 3,
+      }
+    }
   });
 </script>
-
 
   <!-- CONTACT -->
   <section id="contact" class="py-5 bg-dark text-white">
