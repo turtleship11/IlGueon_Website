@@ -1,19 +1,17 @@
-기본 폰트 및 색상
+/* 기본 폰트 및 공통 레이아웃 */
 body {
   font-family: 'Noto Sans KR', sans-serif;
   color: #333;
+  line-height: 1.6;
 }
-/* 내 작업 */
-
-
 /* 큰 네비게이션 바 */
 .big-navbar {
   padding: 25px;
   transition: all 0.3s ease;
 }
 .big-navbar .container {
-  padding-left: 80px;
-  padding-right: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 
@@ -50,101 +48,6 @@ footer {
 }
 
 
-/* 법령 표 섹션 */
-.law-section {
-  background-color: #ffffff; /* 은은한 배경 */
-  padding: 100px 20px;
-}
-
-.text-primary {
-    --bs-text-opacity: 1;
-    color: rgb(17, 77, 166) !important;
-}
-.law-section h3 {
-  color: #002b5b;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-align: center;
-  position: relative;
-}
-
-.law-section h3::after {
-  content: '';
-  display: block;
-  width: 35%;
-  height: 4px;
-  background: linear-gradient(90deg, #0078ff, #00d4ff);
-  margin: 10px auto 0 auto;
-  border-radius: 2px;
-}
-
-.law-section p {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #555;
-  max-width: 1000px;
-  margin: 0 auto 50px auto;
-  text-align: center;
-}
-
-/* 표 스타일 */
-.table-dark-blue {
-  background-color: #002b5b !important;
-  color: #fff;
-}
-
-.custom-table {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  font-size: 1.1rem;
-}
-
-.custom-table th,
-.custom-table td {
-  vertical-align: middle;
-  padding: 18px 20px;
-  border-bottom: 1px solid #e0e0e0;
-  transition: background 0.3s ease;
-}
-
-.custom-table th {
-  background-color: #002b5b;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.custom-table td {
-  color: #222;
-  text-align: center;
-}
-
-.custom-table tr:hover td {
-  background-color: #f1f8ff;
-}
-
-/* 하위 제목 스타일 */
-.table-subhead {
-  background-color: #e6f0ff;
-  font-weight: 700;
-  color: #002b5b;
-  font-size: 1.15rem;
-}
-.container-main {
-  width: 80%;
-  margin: 0 auto;  /* 중앙 정렬 */
-  text-align: center; /* 내부 텍스트도 가운데 정렬 */
-}
-
 /* 반응형 */
 @media (max-width: 768px) {
   .law-section {
@@ -156,4 +59,508 @@ footer {
     padding: 12px 10px;
     font-size: 1rem;
   }
+}
+
+
+/* 섹션 공통 */
+.law-section {
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+.container-main {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 제목 및 시원하게 길어진 밑줄 디자인 */
+.title-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem; /* 제목 크기 확대 */
+  font-weight: 800;
+  color: #002b5b;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 160%; /* 밑줄을 제목보다 훨씬 길게 확장 */
+  height: 6px;
+  background: linear-gradient(90deg, transparent, #002b5b, #0078ff, transparent);
+  margin: 20px auto 0;
+  border-radius: 10px;
+  position: relative;
+  left: -30%; /* 길어진 밑줄의 중앙 정렬을 위함 */
+}
+
+/* PDF 다운로드 버튼 섹션 */
+.download-area {
+  padding: 60px 0 30px 0;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #002b5b;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 43, 91, 0.2);
+}
+.btn-download:hover {
+  background-color: #0078ff;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 120, 255, 0.3);
+}
+
+/* 법령 사이트 링크 버튼 */
+.btn-law-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  border: 2px solid #0078ff;
+  color: #0078ff !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+.btn-law-link:hover {
+  background-color: #0078ff;
+  color: #fff !important;
+}
+
+/* 핵심: 크고 여유로운 표 스타일 */
+.custom-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  margin-bottom: 60px;
+  font-size: 1.2rem; /* 표 글자 크기 확대 */
+}
+.custom-table th {
+  background-color: #002b5b;
+  color: #fff;
+  padding: 30px 15px; /* 상하 여백 대폭 확대 */
+  font-weight: 700;
+}
+.custom-table td {
+  padding: 40px 25px; /* 셀 안쪽 여백을 넉넉하게 조정 */
+  border-bottom: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  background: #fff;
+  vertical-align: middle;
+  line-height: 1.7;
+}
+.table-subhead {
+  background-color: #f1f8ff !important;
+  font-weight: 800;
+  color: #002b5b;
+  width: 20%;
+  border-right: 2px solid #dee2e6 !important;
+}
+
+/* 신규 건축물/과태료 박스 스타일 */
+.info-box {
+  background-color: #eff6ff;
+  border-left: 8px solid #0078ff;
+  padding: 40px;
+  border-radius: 12px;
+  margin: 50px 0;
+}
+.penalty-table th { background-color: #d63031; }
+
+@media (max-width: 992px) {
+  .section-title { font-size: 1.8rem; }
+  .section-title::after { width: 120%; left: -10%; }
+  .custom-table { font-size: 1rem; }
+  .custom-table td { padding: 25px 15px; }
+}
+
+/* ===== HERO SECTION (기계설비) ===== */
+.hero-section {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background: #ffffff;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0d1b2a;
+}
+
+.hero-title span {
+  color: #0078ff;
+}
+
+/* 버튼 (사이트 공통 톤) */
+.hero-btn {
+  border: 2px solid #002b5b;
+  color: #002b5b;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+  background: #fff;
+}
+
+.hero-btn:hover {
+  background: #002b5b;
+  color: #fff;
+}
+
+/* 기계설비 전용 이미지 */
+.hero-image-wrap {
+  margin-top: 10px;
+}
+
+.hero-image-mech {
+  height: 500px;
+  border-radius: 20px;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.1)),
+    url('Imgs/기계설비/스크린샷\ 2026-01-28\ 오후\ 5.32.40.png') center/cover no-repeat;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* 반응형 */
+@media (max-width: 992px) {
+  .hero-title { font-size: 2.1rem; }
+  .hero-image-mech { height: 380px; }
+}
+
+@media (max-width: 576px) {
+  .hero-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .hero-btn {
+    align-self: flex-start;
+  }
+}
+
+/* 과태료 테이블 헤더 색상 강제 지정 */
+.penalty-table th {
+  background-color: #d63031 !important;
+}
+
+/* 테이블 내 리스트 스타일 정렬 */
+.custom-table td.text-start {
+  text-align: left !important;
+}
+
+/* 반응형 모바일 대응 */
+@media (max-width: 768px) {
+  .custom-table {
+    font-size: 0.9rem;
+  }
+  .custom-table td {
+    padding: 15px 10px;
+  }
+}
+/* 현대적인 카드 디자인 */
+
+.modern-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border: 1px solid #f0f0f0;
+}
+
+.modern-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* 상단 헤더 섹션 */
+.card-header {
+  padding: 30px 30px 10px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* 유지관리(진청색) / 성능점검(파란색) 구분 */
+.maintenance .icon-box { background: #002b5b; }
+.inspection .icon-box { background: #0078ff; }
+
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+  color: #333;
+}
+
+/* 테이블 스타일 커스텀 */
+.card-body { padding: 20px 30px 35px; }
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.modern-table th {
+  width: 30%;
+  padding: 18px 0;
+  color: #777;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #f5f5f5;
+  vertical-align: top;
+}
+
+.modern-table td {
+  padding: 18px 0 18px 15px;
+  color: #444;
+  font-weight: 500;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.modern-table tr:last-child th,
+.modern-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 강조 텍스트 및 서브 텍스트 */
+.highlight {
+  color: #0078ff;
+  font-weight: 700;
+}
+
+.maintenance .highlight { color: #002b5b; }
+
+.sub-text {
+  color: #999;
+  font-size: 0.85rem;
+  margin-left: 5px;
+}
+
+.small-info {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* 반응형 모바일 */
+@media (max-width: 768px) {
+  .card-header { padding: 25px 20px 5px; }
+  .card-body { padding: 10px 20px 25px; }
+  .modern-table th { width: 35%; font-size: 0.85rem; }
+  .modern-table td { font-size: 0.9rem; }
+}
+/* 강조 텍스트 스타일 보완 */
+.highlight {
+  background: linear-gradient(to top, rgba(0, 120, 255, 0.1) 40%, transparent 40%);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.maintenance .highlight {
+  color: #002b5b;
+  background: linear-gradient(to top, rgba(0, 43, 91, 0.1) 40%, transparent 40%);
+}
+
+/* 주요업무 리스트 스타일 */
+.small-info {
+  line-height: 1.8 !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+/* 테이블 첫 번째 컬럼(헤더) 너비 고정 */
+.modern-table th {
+  width: 100px;
+  white-space: nowrap;
+}
+
+/* 과태료 카드 전용 포인트 컬러 */
+.penalty { border-top: 5px solid #d63031 !important; }
+.penalty .icon-box { background: #d63031; }
+
+/* 과태료 테이블 헤더 */
+.table-light-head th {
+  background-color: #fcfcfc;
+  border-bottom: 2px solid #eee !important;
+  color: #333 !important;
+  font-size: 0.9rem !important;
+  padding: 15px 10px !important;
+}
+
+/* 금액 강조 스타일 */
+.penalty-text {
+  font-weight: 700;
+  color: #444;
+}
+
+.penalty-danger {
+  font-weight: 700;
+  color: #d63031; /* 제출 미이행은 관리 주체가 가장 실수하기 쉬운 부분이므로 강조 */
+}
+
+/* 테이블 텍스트 왼쪽 정렬 클래스 */
+.modern-table .text-start {
+  text-align: left !important;
+  padding-left: 15px !important;
+}
+
+/* 반응형 대응 */
+@media (max-width: 992px) {
+  .modern-table {
+    min-width: 600px; /* 모바일에서 표가 너무 찌그러지지 않게 가로 스크롤 허용 */
+  }
+}
+
+/* 과태료 테이블 전용 스타일 (가로 너비 활용) */
+.penalty-table {
+  width: 100% !important;
+  text-align: center;
+}
+
+/* 헤더 배경색 및 폰트 설정 */
+.table-light-head th {
+  background-color: #f8f9fa !important;
+  font-size: 0.9rem !important;
+  color: #555 !important;
+  padding: 15px 10px !important;
+  border-bottom: 2px solid #eee !important;
+}
+
+/* 과태료 강조 컬러 */
+.penalty-danger {
+  color: #d63031;
+  font-weight: 700;
+}
+
+/* 과태료 카드 상단 라인 */
+.modern-card.penalty {
+  border-top: 5px solid #d63031 !important;
+}
+
+/* 테이블 셀 패딩 조절 */
+.penalty-table td {
+  padding: 20px 10px !important;
+  font-size: 0.95rem;
+}
+
+/* 텍스트 왼쪽 정렬 (위반행위 컬럼) */
+.penalty-table .text-start {
+  text-align: left !important;
+  padding-left: 20px !important;
+  width: 35%; /* 위반행위 내용이 길므로 너비 확보 */
+}
+
+/* 반응형: 모바일에서 가로 스크롤 허용 */
+@media (max-width: 991px) {
+  .table-responsive {
+    border-radius: 10px;
+    overflow-x: auto;
+  }
+  .penalty-table {
+    min-width: 800px; /* 모바일에서 표가 찌그러지지 않게 최소 너비 고정 */
+  }
+}
+
+/* 제목 밑줄 제거 */
+.section-title::after {
+  display: none !important;
+}
+
+/* 아이콘 크기 통일 (정보통신과 동일한 2.5rem) */
+.standard-card i {
+  font-size: 2.5rem !important; 
+  color: #0078ff;
+}
+
+/* 카드 디자인 */
+.standard-card {
+  background: #fdfdfd;
+  border: 1px solid #e9ecef;
+  border-radius: 15px;
+  padding: 30px 10px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.standard-card .area-text {
+  font-weight: 800;
+  color: #002b5b;
+  font-size: 1.15rem;
+  margin-bottom: 5px;
+}
+
+.standard-card .rank-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #444;
+}
+
+/* 시행중 배지 스타일 */
+.badge {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* 활성화된 카드 (6만 이상) 강조 */
+.standard-card.active {
+  background: #fff;
+  border: 2px solid #0078ff;
+  box-shadow: 0 10px 20px rgba(0, 120, 255, 0.1);
+}
+
+/* 호버 효과 */
+.standard-card:hover {
+  transform: translateY(-5px);
+  border-color: #0078ff;
+}
+/* 전체 컨테이너 폭 통일 */
+.container {
+  max-width: 1200px !important;
 }

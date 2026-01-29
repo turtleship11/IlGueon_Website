@@ -12,8 +12,8 @@ body {
   transition: all 0.3s ease;
 }
 .big-navbar .container {
-  padding-left: 80px;
-  padding-right: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 
@@ -33,7 +33,7 @@ body {
 
 /* 메인 배너 */
 #main-visual {
-  background: url('Imgs/메인/example.jpg') center center / cover no-repeat;
+  background: url('files/일건_0128.mp4') center center / cover no-repeat;
   height: 90vh; /* 화면 높이의 90% */
   position: relative;
   margin-top: 103px;
@@ -90,12 +90,13 @@ h2 {
 footer {
   font-size: 0.9rem;
   line-height: 1.5;
+  background-color:#1f3b64;
 }
 
 /* 사진 */
 #gallery img {
   width: 100%;
-  height: 300px; /* 필요에 따라 높이 조정 가능 */
+  height: 250px; /* 필요에 따라 높이 조정 가능 */
   object-fit: cover;
   filter: grayscale(100%);
   transition: transform 0.3s ease;
@@ -128,7 +129,7 @@ footer {
 
 /* 아이콘 고급 남색 계열 */
 #main-visual .service-box i {
-  color: #1f3b64; /* 고급 남색 */
+  color: #1f3b64;; /* 고급 남색 */
   background: rgba(31, 59, 100, 0.1);
   padding: 15px;
   border-radius: 50%;
@@ -180,7 +181,7 @@ footer {
 /* ================= 인증현황 섹션 스타일 ================= */
 .cert-section {
     padding: 70px 30px;
-background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
   background-attachment: fixed;
 }
 
@@ -196,7 +197,7 @@ background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
     background-size: 80% auto;;
     background-repeat: no-repeat;
     background-position: center center;
-
+     background-color: #f6f6f6;
 }
 
 /* 카드 호버 효과 */
@@ -233,7 +234,7 @@ background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
 }
 
 .bg-cert2 {
-    background-image: url('Imgs/메인/서류/사업자등록증(일건).png');
+    background-image: url('Imgs/메인/서류/정보통신공사업등록증\(jpg파일\).jpg');
 }
 
 .bg-cert3 {
@@ -247,4 +248,218 @@ background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
 
 @media (max-width: 576px) {
     .cert-card { height: 280px; }
+}
+
+/* ================= 정보통신설비 유지보수 섹션 ================= */
+
+.it-section {
+  padding: 80px 50px;
+  background: #ffffff;
+}
+
+.it-subtitle {
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.it-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.it-title span {
+  color: #095fb0;
+}
+
+.it-desc {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.it-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 2px solid #095fb0;
+  color: #095fb0;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.it-btn:hover {
+  background: #095fb0;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ===================== CONTACT SECTION ===================== */
+
+#contact {
+  background-color: #ffffff;
+  padding: 100px 20px;
+}
+
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #095fb0; /* 박스 배경색 */
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  color: #ffffff;
+}
+
+/* 좌측 텍스트 */
+.contact-left {
+  flex: 1 1 45%;
+  margin-bottom: 20px; /* 모바일용 여백 */
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  color:#fff;
+}
+
+.contact-phone {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* 우측 텍스트 + 버튼 */
+.contact-right {
+  flex: 1 1 45%;
+  text-align: right;
+}
+
+.contact-info {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* 버튼 스타일 */
+.contact-btn {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #095fb0;
+  background-color: #ffffff;
+  padding: 14px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #f1f3f5;
+  color: #095fb0;
+  transform: translateY(-2px);
+}
+
+/* 메인 비주얼 영역 */
+#main-visual {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* 화면 높이 90% */
+  overflow: hidden;
+  margin-top: 103px;
+  background-color: #000; /* 비디오 로드 전 대비용 */
+}
+
+/* 배경 동영상 */
+#main-visual .video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 화면 꽉 채우기 */
+  transform: translate(-50%, -50%);
+  z-index: 1; /* 콘텐츠 뒤에 배치 */
+}
+
+/* 텍스트와 서비스 패널 */
+#main-visual .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* 서비스 패널 스타일 */
+.services-panel .service-box {
+  background: rgba(255, 255, 255, 0.1); /* 반투명 배경으로 가독성 확보 */
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+.services-panel .service-box:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+/* 🔥 모든 페이지 컨테이너 폭 통일 */
+.container {
+  max-width: 1200px !important;
+}
+/* 🔥 사이트 전체 컨테이너 최대폭 통일 */
+.container {
+  max-width: 1200px !important;
+}
+
+/* ================= 인증현황 섹션 ================= */
+
+.cert-section {
+  padding: 70px 30px;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+/* 🔥 카드 한 줄 강제 정렬 */
+.cert-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: nowrap; /* 줄바꿈 방지 */
+}
+
+/* 🔥 인증서 카드 (이미지만 표시) */
+.cert-card {
+  width: 100%;
+  max-width: 360px; /* 3개가 1200px 안에 들어오도록 조정 */
+  height: 520px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  background-size: contain;   /* 이미지 잘리지 않게 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f8f9fa;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* 기존 텍스트 오버레이 제거 (안 써도 되지만 혹시 남아있을까봐) */
+.cert-card-overlay {
+  display: none;
+}
+
+/* 반응형 — 화면 작아지면 스크롤 허용 */
+@media (max-width: 1100px) {
+  .cert-row {
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
 }
