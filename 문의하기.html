@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>(주)일건 - 문의하기</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="Imgs/메인/Logo/파비콘누끼.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="문의하기.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
+<script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
 
 <body>
   <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top big-navbar">
@@ -33,9 +35,9 @@
       <div class="swiper gallerySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="Imgs/메인/작업사진1.png" alt="사진 1"></div>
-          <div class="swiper-slide"><img src="Imgs/메인/작업사진2.png" alt="사진 2"></div>
+          <div class="swiper-slide"><img src="Imgs/메인/정보통신사진/IMG_5777.JPG" alt="사진 2"></div>
           <div class="swiper-slide"><img src="Imgs/메인/작업사진3.png" alt="사진 3"></div>
-          <div class="swiper-slide"><img src="Imgs/메인/작업사진4.png" alt="사진 4"></div>
+          <div class="swiper-slide"><img src="Imgs/메인/정보통신사진/IMG_5812.JPG" alt="사진 4"></div>
           <div class="swiper-slide"><img src="Imgs/메인/작업사진5.png" alt="사진 5"></div>
           <div class="swiper-slide"><img src="Imgs/메인/KakaoTalk_20251121_170333492_09.jpg" alt="사진 6"></div>
         </div>
@@ -52,32 +54,36 @@
         <button type="button" id="btn-it" class="btn btn-outline-primary px-5 py-2" onclick="showType('it')">정보통신</button>
       </div>
 
-      <div id="download-mechanical" class="download-section text-center mb-5">
-        <p class="mb-3 text-muted fw-bold">정확한 견적안내를 위해 기계설비 성능점검 산출수량 (견적용) 파일을 다운로드 받아 상세하게 적어주세요.</p>
-        <div class="d-flex justify-content-center flex-wrap gap-3">
-          <a href="files/기계설비_산출수량.xlsx" class="btn btn-download border shadow-sm">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" width="20"> 기계설비 성능점검 산출수량 (견적용).xlsx
-          </a>
-          <a href="files/기계설비_산출수량.hwp" class="btn btn-download border shadow-sm">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png" width="20"> 기계설비 성능점검 산출수량 (견적용).hwp
-          </a>
-        </div>
-      </div>
+        <div id="download-mechanical" class="download-section text-center mb-5">
+          <p class="mb-3 text-muted fw-bold">
+            정확한 견적안내를 위해 기계설비 성능점검 산출수량 (견적용) 파일을 다운로드 받아 상세하게 적어주세요.
+          </p>
 
-      <div id="download-it" class="download-section text-center mb-5" style="display:none;">
-        <p class="mb-3 text-muted fw-bold">정확한 견적안내를 위해 정보통신 성능점검 산출수량 (견적용) 파일을 다운로드 받아 상세하게 적어주세요.</p>
-        <div class="d-flex justify-content-center flex-wrap gap-3">
-          <a href="files/정보통신_산출수량.xlsx" class="btn btn-download border shadow-sm">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" width="20"> 정보통신 성능점검 산출수량 (견적용).xlsx
-          </a>
-          <a href="files/정보통신_산출수량.hwp" class="btn btn-download border shadow-sm">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png" width="20"> 정보통신 성능점검 산출수량 (견적용).hwp
-          </a>
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="files/기계설비 성능점검 산출수량 (견적용).hwp" download class="btn btn-download border shadow-sm">
+              <img src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png" width="20">
+              기계설비 성능점검 산출수량 (견적용).hwp 다운로드
+            </a>
+          </div>
         </div>
-      </div>
 
-      <form id="contactForm" class="mx-auto bg-white p-4 p-md-5 border shadow-sm rounded-1" style="max-width:900px;" action="mailto:example@ilgun.com" method="POST" enctype="text/plain">
-        
+
+<div id="download-it" class="download-section text-center mb-5" style="display:none;">
+  <p class="mb-3 text-muted fw-bold">
+    정확한 견적안내를 위해 정보통신 성능점검 산출수량 (견적용) 파일을 다운로드 받아 상세하게 적어주세요.
+  </p>
+
+  <div class="d-flex justify-content-center flex-wrap gap-3">
+    <a href="files/정보통신 대상 현황표(견적용).hwpx" download class="btn btn-download border shadow-sm">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png" width="20">
+      정보통신 성능점검 산출수량 (견적용).hwp 다운로드
+    </a>
+  </div>
+</div>
+
+
+    <form id="contactForm" class="mx-auto bg-white p-4 p-md-5 border shadow-sm rounded-1" style="max-width:900px;">
+
         <div class="row mb-3 align-items-center">
           <label class="col-md-2 fw-bold">성명 <span class="text-danger">*</span></label>
           <div class="col-md-10">
@@ -86,7 +92,7 @@
         </div>
 
         <div class="row mb-3 align-items-center">
-          <label class="col-md-2 fw-bold">휴대폰 <span class="text-danger">*</span></label>
+          <label class="col-md-2 fw-bold">전화번호 <span class="text-danger">*</span></label>
           <div class="col-md-10">
             <div class="d-flex align-items-center gap-2">
               <input type="text" name="연락처1" class="form-control text-center" maxlength="3" required>
@@ -119,14 +125,18 @@
           </div>
         </div>
 
-        <div class="row mb-4 align-items-center">
-          <label class="col-md-2 fw-bold">파일첨부</label>
-          <div class="col-md-10">
-            <input type="file" class="form-control d-none" id="fileInput">
-            <button type="button" class="btn btn-secondary px-4" onclick="document.getElementById('fileInput').click()">업로드 <i class="fas fa-upload ms-1"></i></button>
-            <span id="fileName" class="ms-2 text-muted small">선택된 파일 없음</span>
-          </div>
-        </div>
+<!-- <div class="row mb-4 align-items-center">
+  <label class="col-md-2 fw-bold">파일첨부</label>
+  <div class="col-md-10">
+    <input type="file" class="form-control d-none" id="fileInput" name="attachment">
+    <button type="button" class="btn btn-secondary px-4" onclick="document.getElementById('fileInput').click()">
+      업로드 <i class="fas fa-upload ms-1"></i>
+    </button>
+    <span id="fileName" class="ms-2 text-muted small">선택된 파일 없음</span>
+    <span id="fileLink" class="ms-2 text-primary small"></span>
+  </div>
+</div> -->
+
 
         <hr class="my-5">
 
@@ -157,10 +167,11 @@
     </div>
   </section>
 
-  <footer class="py-4 text-center bg-secondary text-white mt-5">
+  <!-- FOOTER -->
+  <footer class="py-4 text-center text-white">
     <div class="container small">
       <p class="mb-1">(주)일건 | 대표: 이정희 | 충북 청주시 서원구 남이면 3순환로 427 </p>
-      <p class="mb-0">TEL: 043-212-1136 | 사업자번호: 123-45-67890</p>
+      <p class="mb-0">TEL: 043-212-1136 | FAX: 02-765-4321 | 사업자번호: 123-45-67890</p>
       <p class="mt-2 mb-0">ⓒ 2025 Ilgun Co., Ltd. All rights reserved.</p>
     </div>
   </footer>
@@ -203,17 +214,79 @@
       document.getElementById('fileName').textContent = fileName;
     });
 
-    // 4. 전송 유효성 검사 (개인정보 동의 체크)
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      const agreeCheckbox = document.getElementById('privacyAgree');
-      
-      if (!agreeCheckbox.checked) {
-        event.preventDefault(); // 폼 전송 중단
-        alert("개인정보 수집 및 이용에 동의해야 합니다."); // 안내창
-        agreeCheckbox.focus();
-        return false;
-      }
-    });
   </script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // 1. EmailJS 초기화
+  (function(){
+    emailjs.init("z5yKQtpmMikrKfh_3"); // 본인 Public Key
+  })();
+
+  const fileInput = document.getElementById('fileInput');
+  const fileNameSpan = document.getElementById('fileName');
+
+  // 2. 파일 선택 시 이름 표시
+  fileInput.addEventListener('change', function(){
+    const file = this.files[0];
+    fileNameSpan.textContent = file ? file.name : "선택된 파일 없음";
+  });
+
+  // 3. 폼 제출
+  document.getElementById('contactForm').addEventListener('submit', async function(event){
+    event.preventDefault();
+
+    const agreeCheckbox = document.getElementById('privacyAgree');
+    if (!agreeCheckbox.checked) {
+      alert("개인정보 수집 및 이용에 동의해야 합니다.");
+      agreeCheckbox.focus();
+      return;
+    }
+
+    const form = this;
+    const phone = form.연락처1.value + "-" + form.연락처2.value + "-" + form.연락처3.value;
+
+    const templateParams = {
+      user_name: form.성명.value,
+      user_email: form.이메일.value,
+      phone: phone,
+      subject: form.제목.value,
+      message: form.내용.value,
+      attachment_url: "" // Dropbox 링크용
+    };
+
+    // 4. Dropbox Access Token
+    const dbx = new Dropbox.Dropbox({ accessToken: 'sl.u.AGSNAxuM8jaLSAst2zaE17ZWcUz9xc5oQ9ZhllDQzfsNvu-M4bm6mBwJ8kG3Dv-xvD9wDwlFhNzWGbgpLHdiQcGNUjuO11UmsymJY6kvrSdE8Hla1PMQU2yXqfdtVhueFrfswcW-pFVpqPgQQ2VjUJ_ImUsPh49kE11jOprJS7UMKUE4QYUGXZvicOdU1XViUOYP_WNt1B5R6FofLaHpe78_GhYGSHkqI-uPapGrTACKucYXytkVC9Mmn2M2AICDRiN7duTLgRf-6SzkNpCoZUyPm9Lmaxt9NRhBf3WeP9jwZLRuHPfWA2LIbbN4-yzpLyygmtF6na0ezo-Txd5LLHDztWm8OhqWoBmh4FEEvQiLdNoPf5tjjbUM3Vt7jGlxbFsF1lcUg3pq6pEkSgihgf1T594hw32efcI-PPTPvB8w7eDH7YUhADzPxgnMc8eB_Pkj8E62ImBGfFMGNuCD-il6y382B3QFaXj3c5WAOI6J3LizP9zUmzxiXNZ0eHFjSWnMSGmrmWz5ZOomyc_fZ86dwcqIJvP3sLzZtsl9xVn0-gwgQYrEhAhACT9hrneTlirBt07jkAxZR_dfrMwXYgzZfhjtucWy2681DjxRv_GyeAzelK0DzikFpOuuVXn05hli8nx9NIvawQY8uj4d3aAFP_a4vE98ImFy0kAxz8XOEeShCi4132m2Gj4MFMdZ2UAvwcj6UBbwmohVO0l-HwjsX-v_oeqyR3K-LyojCGadIXo7Hhv-3E67p_-MDmNgFHIf_nSxgj3T3l3erSkSCB1CzuE0UjFIHvyInT15pbHz2Znl0ebgzTpQs5DCcH4pnFrZe-OcHcWUjNVtXLJ4d9QYceA_Rkd3XvrnFgAxdZn8K8J-eSDHp6qYsx2IWDcoFBSIVEp5UqeNULKwwoQJNiYeVO9jN_Wi_PW3IJUfIhaQz8HVhrp_asrfpRlqBl2Xa5bAoth6h3hZYZBFtDXHrou-2TrYUwAHSJwQyy1--qReQHbktwqVpFyrQk4F5Qx_gkqHq3hiPOfKpWx6FXsCsSrn9qvJ0aw0bCh8GL_QgJmc0gsWxiI1bY48KOOwhgN_JyqWxbXkYkI5tNvuxW2YkNCdlpZdBEepOzI0x-Av4WTW7geLNp_JYQZ_0S5C09AZYfVJ-iWDMc6UO8xe2XIkvXIenO4HNbR1ipvJenRsCuEXsZZ11l8UhkmJ9di2SrJ9aui_XYkZSLCpConhHsr6IK3Ce2PJfD3UofLF2a1OQdXgsEnyLaVf2trpqESbJgl_d9I2flEYz8ZrlMx3r---8Z3uEQq2yxY_TNaMh13DdUQIuiQQOOTbkAJsAMrY4ymJRm2GbvMv-6eQf3xlj1aFGXm6W87wt9ZIG6hXA2J2t7YR58BASlvXmOx9XnVVv8LjOnu16lHmyazE0o6t63dU1w73' });
+
+    // 5. 파일 업로드 및 링크 생성
+    if (fileInput.files.length > 0) {
+      const file = fileInput.files[0];
+      try {
+        // Dropbox 업로드
+        await dbx.filesUpload({ path: '/' + file.name, contents: file, mode: 'overwrite' });
+
+        // 공유 링크 생성
+        const linkRes = await dbx.sharingCreateSharedLinkWithSettings({ path: '/' + file.name });
+        templateParams.attachment_url = linkRes.url.replace('?dl=0', '?dl=1'); // 바로 다운로드 링크
+      } catch (err) {
+        console.error(err);
+        alert("Dropbox 업로드 실패: " + err);
+        return;
+      }
+    }
+
+    // 6. EmailJS 전송
+    emailjs.send("service_6kvz57w", "template_8l45lz5", templateParams)
+      .then(function() {
+        alert("문의가 성공적으로 전송되었습니다!");
+        form.reset();
+        fileNameSpan.textContent = "선택된 파일 없음";
+      }, function(error) {
+        alert("전송 실패: " + JSON.stringify(error));
+      });
+
+  });
+</script>
+
+
 </body>
 </html>

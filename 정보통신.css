@@ -264,9 +264,11 @@ body {
   color: #555;
 }
 
-/* ================= FOOTER ================= */
+/* 푸터 */
 footer {
-  background: #444 !important;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  background-color:#1f3b64;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -348,4 +350,7 @@ footer {
 /* 표 테두리 선 투명도 조절 */
 .custom-equipment-table td, .custom-equipment-table th {
   border-color: #eee !important;
+}
+.navbar .nav-link.active {
+  color: #007bff !important;        /* 파란색 */
 }

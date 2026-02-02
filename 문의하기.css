@@ -155,12 +155,17 @@ body {
   }
 }
 
-/* --- 푸터 --- */
+/* 푸터 */
 footer {
-  font-size: 0.85rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  background-color:#1f3b64;
 }
 /* 전체 컨테이너 폭 통일 */
 .container {
   max-width: 1200px !important;
+}
+
+.navbar .nav-link.active {
+  color: #007bff !important;        /* 파란색 */
 }

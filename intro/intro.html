@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>(주)일건 - 회사소개</title>
+  <title>(주)일건 - 문의하기</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../Imgs/메인/Logo/파비콘누끼.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="intro.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
-<body>
 
-  <!-- 상단 네비게이션 -->
+<body>
   <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top big-navbar">
     <div class="container">
-      <a href="../index.html"><img src="../Imgs/메인/Logo/한글@4x.png" alt="Logo" width="100px"></a>
+      <a href="../index.html"><img src="../Imgs/메인/Logo/한글@4x.png" alt="Logo" width="100px" class="img-logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,15 +22,15 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
           <li class="nav-item"><a href="intro.html" class="nav-link active">회사소개</a></li>
           <li class="nav-item"><a href="../기계설비.html" class="nav-link">기계설비</a></li>
-          <li class="nav-item"><a href="#equipment" class="nav-link">정보통신설비</a></li>
-          <li class="nav-item"><a href="../문의하기.html" class="nav-link">문의하기</a></li>
+          <li class="nav-item"><a href="../정보통신.html" class="nav-link">정보통신설비</a></li>
+          <li class="nav-item"><a href="../문의하기.html" class="nav-link ">문의하기</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- 메인 콘텐츠 -->
-  <main class="container mt-5 pt-5 main-wrapper">
+   <!-- 메인 콘텐츠 -->
+  <main class="container mt-5 pt-5 main-wrapper ">
     <section class="intro" id="about">
       
       <div class="visual-header mb-5">
@@ -47,7 +48,7 @@
           <button class="nav-link" id="tab-3" data-bs-toggle="pill" data-bs-target="#content-3" type="button" role="tab">사업분야</button>
         </li>
         <li class="nav-item">
-          <button class="nav-link" id="tab-4" data-bs-toggle="pill" data-bs-target="#content-4" type="button" role="tab">aus</button>
+          <button class="nav-link" id="tab-4" data-bs-toggle="pill" data-bs-target="#content-4" type="button" role="tab">면허 및 인증서</button>
         </li>
         <li class="nav-item">
           <button class="nav-link" id="tab-5" data-bs-toggle="pill" data-bs-target="#content-5" type="button" role="tab">장비보유현황</button>
@@ -68,37 +69,243 @@
           </div>
         </div>
 
-        <div class="tab-pane fade" id="content-2" role="tabpanel">
-          <h3 class="tab-title">회사개요</h3>
-          <p>내용을 입력해주세요.</p>
-        </div>
-
-        <div class="tab-pane fade" id="content-3" role="tabpanel">
-          <h3 class="tab-title">사업분야</h3>
-          <p>내용을 입력해주세요.</p>
-        </div>
-
-        <div class="tab-pane fade" id="content-4" role="tabpanel">
-          <h3 class="tab-title">기술자격현황</h3>
-          <p>내용을 입력해주세요.</p>
-        </div>
-
-        <div class="tab-pane fade" id="content-5" role="tabpanel">
-          <h3 class="tab-title">장비보유현황</h3>
-          <p>내용을 입력해주세요.</p>
-        </div>
+<div class="tab-pane fade" id="content-3" role="tabpanel">
+  <div class="highlight mb-5">
+  “저희 <strong>(주)일건</strong>은 정보통신 / 기계설비 유지 점검 전문 업체입니다.”
+</div>
+  <div class="row g-4 justify-content-center">
+    
+    <div class="col-md-6 col-lg-3">
+      <div class="biz-card highlight-card">
+        <div class="biz-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+        <h4 class="biz-name">정보통신 유지보수<br>관리자 위탁 선임</h4>
+        <p class="biz-desc">법적 기준에 따른 전문 자격 기술자 배치 및 선임 업무 대행</p>
       </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-3">
+      <div class="biz-card highlight-card">
+        <div class="biz-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+        <h4 class="biz-name">정보통신설비<br>성능점검</h4>
+        <p class="biz-desc">34개 항목의 통신/방송/정보 설비에 대한 정기 성능점검 및 결과 보고</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="biz-card highlight-card">
+        <div class="biz-icon"><i class="fa-solid fa-gears"></i></div>
+        <h4 class="biz-name">기계설비 유지관리자<br>위탁 선임</h4>
+        <p class="biz-desc">건축물 에너지 절감 및 안전 확보를 위한 유지관리자 법적 선임 대행</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="biz-card highlight-card">
+        <div class="biz-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h4 class="biz-name">기계설비<br>성능점검</h4>
+        <p class="biz-desc">기계설비법에 근거한 최신 계측 장비 활용 정밀 성능점검 서비스</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- 자격현황 -->
+<div class="tab-pane fade" id="content-4" role="tabpanel">
+  <div class="highlight mb-5">
+  “저희 <strong>(주)일건</strong>의 신뢰를 증명하는 면허 및 인증서입니다.”
+</div>
+
+  <div class="cert-wrapper">
+    <div class="cert-card">
+      <img src="../Imgs/메인/서류/중소기업확인서(일건).png" alt="중소기업 확인서">
+    </div>
+
+    <div class="cert-card">
+      <img src="../Imgs/메인/서류/정보통신공사업등록증(jpg파일).jpg" alt="정보통신공사업 등록증">
+    </div>
+
+    <div class="cert-card">
+      <img src="../Imgs/메인/서류/기계설비등록증(일건).png" alt="기계설비공사업 등록증">
+    </div>
+  </div>
+</div>
+<!-- 장비보유현황 -->
+<!-- 장비보유현황 -->
+<div class="tab-pane fade" id="content-5" role="tabpanel">
+  <div class="highlight mb-5">
+  “저희 <strong>(주)일건</strong>이 보유하고 있는 장비현황목록 입니다.”
+</div>
+  <div class="equipment-grid">
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/조도계.png" alt="조도계">
+      <p class="equipment-name">조도계</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/디지털압력계.png" alt="디지털압력계">
+      <p class="equipment-name">디지털압력계</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/회전계.png" alt="회전계">
+      <p class="equipment-name">회전계</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/풍속계.png" alt="풍속계">
+      <p class="equipment-name">풍속계</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/누수탐지기.png" alt="누수탐지기">
+      <p class="equipment-name">누수탐지기</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/두께측정기.png" alt="두께측정기">
+      <p class="equipment-name">두께측정기</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/표준온도계.png" alt="표준온도계">
+      <p class="equipment-name">표준온도계</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/내시경카메라.png" alt="내시경 카메라">
+      <p class="equipment-name">내시경 카메라</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/데이터기록계.png" alt="데이터 기록계">
+      <p class="equipment-name">데이터 기록계</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/소음측정기.png" alt="소음측정기">
+      <p class="equipment-name">소음측정기</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/수질분석기.png" alt="수질분석기">
+      <p class="equipment-name">수질분석기</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/전류측정기.png" alt="전류측정기">
+      <p class="equipment-name">전류측정기</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/열화상카메라.png" alt="열화상 카메라">
+      <p class="equipment-name">열화상 카메라</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/초음파유량계.png" alt="초음파 유량계">
+      <p class="equipment-name">초음파 유량계</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/풍압풍속계.png" alt="풍압/풍속계">
+      <p class="equipment-name">풍압/풍속계</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/건습구온도계.png" alt="건습구 온도계">
+      <p class="equipment-name">건습구 온도계</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/버니어캘리퍼스.png" alt="버니어 캘리퍼스">
+      <p class="equipment-name">버니어 캘리퍼스</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/적외선온도계.png" alt="적외선 온도계">
+      <p class="equipment-name">적외선 온도계</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/연소가스측정기.png" alt="연소가스 측정기">
+      <p class="equipment-name">연소가스 측정기</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/초음파두께측정기.png" alt="초음파 두께측정기">
+      <p class="equipment-name">초음파 두께측정기</p>
+    </div>
+
+    <div class="equipment-card">
+      <img src="../Imgs/장비사진/이산화탄소측정기.png" alt="이산화탄소 측정기">
+      <p class="equipment-name">이산화탄소 측정기</p>
+    </div>
+
+    <div class="equipment-card">
+  <img src="../Imgs/장비사진/3축 고주파 전자파 측정기.png" alt="3축 고주파 전자파 측정기">
+  <p class="equipment-name">3축 고주파 전자파 측정기</p>
+</div>
+
+<div class="equipment-card">
+  <img src="../Imgs/장비사진/EMF Meter.png" alt="EMF Meter">
+  <p class="equipment-name">EMF Meter</p>
+</div>
+
+<div class="equipment-card">
+  <img src="../Imgs/장비사진/TV,Cable,Satellite & WIFI Analyzer.png" alt="TV, Cable, Satellite & WIFI Analyzer">
+  <p class="equipment-name">TV, Cable, Satellite & WIFI Analyzer</p>
+</div>
+
+<div class="equipment-card">
+  <img src="../Imgs/장비사진/핑 테스터기.png" alt="핑 테스터기">
+  <p class="equipment-name">핑 테스터기</p>
+</div>
+
+<div class="equipment-card">
+  <img src="../Imgs/장비사진/디지털 아날로그 RF 신호 계측기.png" alt="디지털 아날로그 RF 신호 계측기">
+  <p class="equipment-name">디지털 아날로그 RF 신호 계측기</p>
+</div>
+
+<div class="equipment-card">
+  <img src="../Imgs/장비사진/진동계(기계설비장비 추가).png" alt="진동계">
+  <p class="equipment-name">진동계</p>
+</div>
+
+<div class="equipment-card">
+  <img src="../Imgs/장비사진/굴절식 배터리 비중계.png" alt="굴절식 배터리 비중계">
+  <p class="equipment-name">굴절식 배터리 비중계</p>
+</div>
+
+<div class="equipment-card">
+  <img src="../Imgs/장비사진/광파워미터.png" alt="광파워미터">
+  <p class="equipment-name">광파워미터</p>
+</div>
+
+<div class="equipment-card">
+  <img src="../Imgs/장비사진/접지저항측정기.png" alt="접지저항측정기">
+  <p class="equipment-name">접지저항측정기</p>
+</div>
+
+  </div>
+</div>
+
+
+
     </section>
   </main>
 
-  <!-- 푸터 -->
-  <footer class="py-5 text-center bg-dark text-white mt-5">
+  <!-- FOOTER -->
+  <footer class="py-4 text-center text-white">
     <div class="container small">
       <p class="mb-1">(주)일건 | 대표: 이정희 | 충북 청주시 서원구 남이면 3순환로 427 </p>
-      <p class="mb-0">TEL: 043-212-1136 | FAX: 02-765-4321 | ⓒ 2026 Ilgun Co., Ltd.</p>
+      <p class="mb-0">TEL: 043-212-1136 | FAX: 02-765-4321 | 사업자번호: 123-45-67890</p>
+      <p class="mt-2 mb-0">ⓒ 2025 Ilgun Co., Ltd. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 </html>
