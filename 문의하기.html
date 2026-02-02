@@ -83,9 +83,14 @@
 
 
     <form id="contactForm" class="mx-auto bg-white p-4 p-md-5 border shadow-sm rounded-1" style="max-width:900px;">
-
+      <div class="row mb-3 align-items-center">
+        <label class="col-md-2 fw-bold">업체명 <span class="text-danger">*</span></label>
+        <div class="col-md-10">
+          <input type="text" name="업체" class="form-control" placeholder="업체명을 입력하세요" required>
+        </div>
+      </div>
         <div class="row mb-3 align-items-center">
-          <label class="col-md-2 fw-bold">성명 <span class="text-danger">*</span></label>
+          <label class="col-md-2 fw-bold">담당자 <span class="text-danger">*</span></label>
           <div class="col-md-10">
             <input type="text" name="성명" class="form-control" placeholder="성명을 입력하세요" required>
           </div>
@@ -216,74 +221,57 @@
 
   </script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 <script>
   // 1. EmailJS 초기화
   (function(){
-    emailjs.init("z5yKQtpmMikrKfh_3"); // 본인 Public Key
+    emailjs.init("z5yKQtpmMikrKfh_3"); // Public Key
   })();
 
-  const fileInput = document.getElementById('fileInput');
-  const fileNameSpan = document.getElementById('fileName');
-
-  // 2. 파일 선택 시 이름 표시
-  fileInput.addEventListener('change', function(){
-    const file = this.files[0];
-    fileNameSpan.textContent = file ? file.name : "선택된 파일 없음";
-  });
-
-  // 3. 폼 제출
-  document.getElementById('contactForm').addEventListener('submit', async function(event){
+  // 2. 폼 제출 이벤트
+  document.getElementById('contactForm').addEventListener('submit', function(event){
     event.preventDefault();
 
+    // 개인정보 동의 체크
     const agreeCheckbox = document.getElementById('privacyAgree');
-    if (!agreeCheckbox.checked) {
+    if (!agreeCheckbox || !agreeCheckbox.checked) {
       alert("개인정보 수집 및 이용에 동의해야 합니다.");
-      agreeCheckbox.focus();
       return;
     }
 
     const form = this;
     const phone = form.연락처1.value + "-" + form.연락처2.value + "-" + form.연락처3.value;
 
+    // EmailJS 템플릿의 {{변수}}와 정확히 일치시켜야 합니다.
     const templateParams = {
-      user_name: form.성명.value,
+      company: form.업체.value,
+      name: form.성명.value,       // {{name}}
+      title: form.제목.value,      // {{title}}
+      subject: form.제목.value,    // 혹시 모르니 유지
       user_email: form.이메일.value,
       phone: phone,
-      subject: form.제목.value,
       message: form.내용.value,
-      attachment_url: "" // Dropbox 링크용
+      user_name: form.성명.value   // {{user_name}}
     };
 
-    // 4. Dropbox Access Token
-    const dbx = new Dropbox.Dropbox({ accessToken: 'sl.u.AGSNAxuM8jaLSAst2zaE17ZWcUz9xc5oQ9ZhllDQzfsNvu-M4bm6mBwJ8kG3Dv-xvD9wDwlFhNzWGbgpLHdiQcGNUjuO11UmsymJY6kvrSdE8Hla1PMQU2yXqfdtVhueFrfswcW-pFVpqPgQQ2VjUJ_ImUsPh49kE11jOprJS7UMKUE4QYUGXZvicOdU1XViUOYP_WNt1B5R6FofLaHpe78_GhYGSHkqI-uPapGrTACKucYXytkVC9Mmn2M2AICDRiN7duTLgRf-6SzkNpCoZUyPm9Lmaxt9NRhBf3WeP9jwZLRuHPfWA2LIbbN4-yzpLyygmtF6na0ezo-Txd5LLHDztWm8OhqWoBmh4FEEvQiLdNoPf5tjjbUM3Vt7jGlxbFsF1lcUg3pq6pEkSgihgf1T594hw32efcI-PPTPvB8w7eDH7YUhADzPxgnMc8eB_Pkj8E62ImBGfFMGNuCD-il6y382B3QFaXj3c5WAOI6J3LizP9zUmzxiXNZ0eHFjSWnMSGmrmWz5ZOomyc_fZ86dwcqIJvP3sLzZtsl9xVn0-gwgQYrEhAhACT9hrneTlirBt07jkAxZR_dfrMwXYgzZfhjtucWy2681DjxRv_GyeAzelK0DzikFpOuuVXn05hli8nx9NIvawQY8uj4d3aAFP_a4vE98ImFy0kAxz8XOEeShCi4132m2Gj4MFMdZ2UAvwcj6UBbwmohVO0l-HwjsX-v_oeqyR3K-LyojCGadIXo7Hhv-3E67p_-MDmNgFHIf_nSxgj3T3l3erSkSCB1CzuE0UjFIHvyInT15pbHz2Znl0ebgzTpQs5DCcH4pnFrZe-OcHcWUjNVtXLJ4d9QYceA_Rkd3XvrnFgAxdZn8K8J-eSDHp6qYsx2IWDcoFBSIVEp5UqeNULKwwoQJNiYeVO9jN_Wi_PW3IJUfIhaQz8HVhrp_asrfpRlqBl2Xa5bAoth6h3hZYZBFtDXHrou-2TrYUwAHSJwQyy1--qReQHbktwqVpFyrQk4F5Qx_gkqHq3hiPOfKpWx6FXsCsSrn9qvJ0aw0bCh8GL_QgJmc0gsWxiI1bY48KOOwhgN_JyqWxbXkYkI5tNvuxW2YkNCdlpZdBEepOzI0x-Av4WTW7geLNp_JYQZ_0S5C09AZYfVJ-iWDMc6UO8xe2XIkvXIenO4HNbR1ipvJenRsCuEXsZZ11l8UhkmJ9di2SrJ9aui_XYkZSLCpConhHsr6IK3Ce2PJfD3UofLF2a1OQdXgsEnyLaVf2trpqESbJgl_d9I2flEYz8ZrlMx3r---8Z3uEQq2yxY_TNaMh13DdUQIuiQQOOTbkAJsAMrY4ymJRm2GbvMv-6eQf3xlj1aFGXm6W87wt9ZIG6hXA2J2t7YR58BASlvXmOx9XnVVv8LjOnu16lHmyazE0o6t63dU1w73' });
+    // 전송 중임을 알림 (버튼 비활성화 등)
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.innerText = "전송 중...";
+    submitBtn.disabled = true;
 
-    // 5. 파일 업로드 및 링크 생성
-    if (fileInput.files.length > 0) {
-      const file = fileInput.files[0];
-      try {
-        // Dropbox 업로드
-        await dbx.filesUpload({ path: '/' + file.name, contents: file, mode: 'overwrite' });
-
-        // 공유 링크 생성
-        const linkRes = await dbx.sharingCreateSharedLinkWithSettings({ path: '/' + file.name });
-        templateParams.attachment_url = linkRes.url.replace('?dl=0', '?dl=1'); // 바로 다운로드 링크
-      } catch (err) {
-        console.error(err);
-        alert("Dropbox 업로드 실패: " + err);
-        return;
-      }
-    }
-
-    // 6. EmailJS 전송
+    // 3. EmailJS 전송 (Dropbox 부분은 에러 방지를 위해 일단 제외)
     emailjs.send("service_6kvz57w", "template_8l45lz5", templateParams)
       .then(function() {
         alert("문의가 성공적으로 전송되었습니다!");
         form.reset();
-        fileNameSpan.textContent = "선택된 파일 없음";
+        submitBtn.innerText = "문의하기";
+        submitBtn.disabled = false;
       }, function(error) {
+        console.error("EmailJS Error:", error);
         alert("전송 실패: " + JSON.stringify(error));
+        submitBtn.innerText = "문의하기";
+        submitBtn.disabled = false;
       });
-
   });
 </script>
 

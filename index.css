@@ -31,14 +31,6 @@ body {
   margin-right: 0; /* 마지막 메뉴는 여백 제거 */
 }
 
-/* 메인 배너 */
-#main-visual {
-  background: url('files/일건_0128.mp4') center center / cover no-repeat;
-  height: 90vh; /* 화면 높이의 90% */
-  position: relative;
-  margin-top: 103px;
- 
-}
 /* 서비스 아이콘 박스 */
 .service-box {
   background: #fff;
@@ -110,7 +102,7 @@ footer {
 /* 메인 비주얼 내부 카드 영역 */
 #main-visual .services-panel {
   max-width: 950px;
-   transform: translateY(210px);
+   transform: translateY(230px);
 }
 
 /* 카드 스타일 - 글래스모피즘 느낌 */
@@ -180,7 +172,7 @@ footer {
 
 /* ================= 인증현황 섹션 스타일 ================= */
 .cert-section {
-    padding: 70px 30px;
+    padding: 100px 30px;
   background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
   background-attachment: fixed;
 }
@@ -396,7 +388,7 @@ footer {
 #main-visual .container {
   position: relative;
   z-index: 2;
-  transform: translateY(-70px); /* 위로 50px 이동 */
+  transform: translateY(-80px); /* 위로 50px 이동 */
 }
 
 /* 서비스 패널 스타일 */
@@ -410,10 +402,6 @@ footer {
   background: rgba(255, 255, 255, 0.25);
 }
 /* 🔥 모든 페이지 컨테이너 폭 통일 */
-.container {
-  max-width: 1200px !important;
-}
-/* 🔥 사이트 전체 컨테이너 최대폭 통일 */
 .container {
   max-width: 1200px !important;
 }
@@ -450,11 +438,6 @@ footer {
 .cert-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-/* 기존 텍스트 오버레이 제거 (안 써도 되지만 혹시 남아있을까봐) */
-.cert-card-overlay {
-  display: none;
 }
 
 /* 반응형 — 화면 작아지면 스크롤 허용 */
@@ -522,4 +505,59 @@ footer {
 @keyframes pulse {
   0%, 100% { opacity: 0.2; }
   50% { opacity: 0.4; }
+}
+/* 인증서 헤더 */
+.cert-header {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+/* 타이틀 */
+.cert-title {
+  font-size: 2.8rem;   /* 앱 섹션 타이틀과 비슷하게 조정 */
+  color: #1f3b64;      /* 검은색 */
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  display: inline-block;
+}
+.cert-highlight {
+  color: #095fb0; /* 남색 */
+}
+/* 부제목 */
+.cert-subtitle {
+  font-size: 1.25rem;  /* 앱 섹션 부제목과 비슷하게 */
+  color: #555;
+  letter-spacing: 0.5px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* 강조 노란 밑줄 */
+.highlight-underline {
+  background-color: #fff3b0;  /* 기존 앱 섹션 노란색 */
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .cert-title {
+    font-size: 2.2rem;
+  }
+  .cert-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cert-title {
+    font-size: 1.8rem;
+  }
+  .cert-subtitle {
+    font-size: 1rem;
+  }
 }

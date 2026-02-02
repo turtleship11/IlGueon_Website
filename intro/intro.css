@@ -87,7 +87,7 @@ body {
   background: #f0f8ff;
   padding: 30px;
   border-left: 6px solid #005bbb;
-  border-radius: 0 16px 16px 0;
+  border-radius:16px;
   font-size: 1.3rem;
   font-weight: 600;
   color: #002b5b;
