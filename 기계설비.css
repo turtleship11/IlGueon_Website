@@ -568,3 +568,39 @@ footer {
 .navbar .nav-link.active {
   color: #007bff !important;        /* 파란색 */
 }
+/* 모바일 대응: 과태료 카드 축소 */
+@media (max-width: 768px) {
+  /* 카드 전체 크기 줄이기 */
+  .modern-card.penalty {
+    padding: 20px !important; /* 상하좌우 패딩 축소 */
+    border-radius: 12px;
+  }
+
+  /* 카드 내부 헤더 */
+  .modern-card.penalty .card-header {
+    padding: 15px 10px 5px !important;
+    gap: 10px;
+  }
+
+  /* 카드 제목 줄이기 */
+  .modern-card.penalty .card-title {
+    font-size: 1.1rem !important;
+  }
+
+  /* 카드 내부 텍스트 크기 줄이기 */
+  .penalty-table td,
+  .penalty-table th {
+    font-size: 0.8rem !important;
+    padding: 8px 5px !important;
+  }
+
+  /* 표 최소 너비 줄이기 */
+  .penalty-table {
+    min-width: 100% !important;
+  }
+
+  /* 카드 높이 줄이기 */
+  .modern-card.penalty {
+    height: auto !important;
+  }
+}

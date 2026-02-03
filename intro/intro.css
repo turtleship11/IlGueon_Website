@@ -105,7 +105,7 @@ body {
 
 /* 글 본문 중앙 정렬 */
 .full-message-natural {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
   line-height: 1.7;
   font-size: 1rem;
@@ -233,7 +233,7 @@ footer {
 
 .cert-card {
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   background: #fff;
   padding: 25px;
   border-radius: 20px;
