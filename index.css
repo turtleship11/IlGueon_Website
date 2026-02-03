@@ -99,7 +99,7 @@ footer {
 }
 
 
-/* 메인 비주얼 내부 카드 영역 */
+
 #main-visual .services-panel {
   max-width: 950px;
    transform: translateY(230px);
@@ -233,15 +233,15 @@ footer {
 
 /* 카드 배경 이미지 */
 .bg-cert1 {
-    background-image: url('Imgs/메인/서류/중소기업확인서(일건).png');
+    background-image: url('Imgs/main/서류/중소기업확인서(일건).png');
 }
 
 .bg-cert2 {
-    background-image: url('Imgs/메인/서류/정보통신공사업등록증\(jpg파일\).jpg');
+    background-image: url('Imgs/main/서류/정보통신공사업등록증\(jpg파일\).jpg');
 }
 
 .bg-cert3 {
-    background-image: url('Imgs/메인/서류/기계설비등록증(일건).png');
+    background-image: url('Imgs/main/서류/기계설비등록증(일건).png');
 }
 
 

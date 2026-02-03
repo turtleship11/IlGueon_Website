@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(주)일건 - 문의하기</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="Imgs/main/Logo/파비콘누끼.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Inquiry.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
+
+<body>
+  <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top big-navbar">
+    <div class="container">
+      <a href="index.html"><img src="Imgs/main/Logo/Logo.png" alt="Logo" width="100px" class="img-logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
+          <li class="nav-item"><a href="intro.html" class="nav-link">회사소개</a></li>
+          <li class="nav-item"><a href="mechanic.html" class="nav-link">기계설비</a></li>
+          <li class="nav-item"><a href="it.html" class="nav-link">정보통신설비</a></li>
+          <li class="nav-item"><a href="Inquiry.html" class="nav-link active">문의하기</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="gallery" class="py-5 bg-white no-padding-bottom" style="margin-top: 50px;">
+    <div class="container-fluid px-0">
+      <div class="swiper gallerySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="Imgs/main/기계사진/작업사진1.png" alt="사진 1"></div>
+          <div class="swiper-slide"><img src="Imgs/main/정보통신사진/IMG_5777.JPG" alt="사진 2"></div>
+          <div class="swiper-slide"><img src="Imgs/main/기계사진/작업사진3.png" alt="사진 3"></div>
+          <div class="swiper-slide"><img src="Imgs/main/정보통신사진/IMG_5812.JPG" alt="사진 4"></div>
+          <div class="swiper-slide"><img src="Imgs/main/기계사진/작업사진5.png" alt="사진 5"></div>
+          <div class="swiper-slide"><img src="Imgs/main/기계사진/KakaoTalk_20251121_170333492_09.jpg" alt="사진 6"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h3 class="text-center mb-5 fw-bold">온라인 견적 문의</h3>
+
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <button type="button" id="btn-mech" class="btn btn-outline-primary px-5 py-2 active" onclick="showType('mechanical')">기계설비</button>
+        <button type="button" id="btn-it" class="btn btn-outline-primary px-5 py-2" onclick="showType('it')">정보통신</button>
+      </div>
+
+        <div id="download-mechanical" class="download-section text-center mb-5">
+          <p class="mb-3 text-muted fw-bold">
+            정확한 견적안내를 위해 기계설비 성능점검 산출수량 (견적용) 파일을 다운로드 받아 상세하게 적어주세요.
+          </p>
+
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="files/기계설비 성능점검 산출수량 (견적용).hwp" download class="btn btn-download border shadow-sm">
+              <img src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png" width="20">
+              기계설비 성능점검 산출수량 (견적용).hwp 다운로드
+            </a>
+          </div>
+        </div>
+
+
+<div id="download-it" class="download-section text-center mb-5" style="display:none;">
+  <p class="mb-3 text-muted fw-bold">
+    정확한 견적안내를 위해 정보통신 성능점검 산출수량 (견적용) 파일을 다운로드 받아 상세하게 적어주세요.
+  </p>
+
+  <div class="d-flex justify-content-center flex-wrap gap-3">
+    <a href="files/정보통신 대상 현황표(견적용).hwpx" download class="btn btn-download border shadow-sm">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png" width="20">
+      정보통신 성능점검 산출수량 (견적용).hwp 다운로드
+    </a>
+  </div>
+</div>
+
+
+    <form id="contactForm" class="mx-auto bg-white p-4 p-md-5 border shadow-sm rounded-1" style="max-width:900px;">
+      <div class="row mb-3 align-items-center">
+        <label class="col-md-2 fw-bold">업체명 <span class="text-danger">*</span></label>
+        <div class="col-md-10">
+          <input type="text" name="업체" class="form-control" placeholder="업체명을 입력하세요" required>
+        </div>
+      </div>
+        <div class="row mb-3 align-items-center">
+          <label class="col-md-2 fw-bold">담당자 <span class="text-danger">*</span></label>
+          <div class="col-md-10">
+            <input type="text" name="성명" class="form-control" placeholder="성명을 입력하세요" required>
+          </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+          <label class="col-md-2 fw-bold">전화번호 <span class="text-danger">*</span></label>
+          <div class="col-md-10">
+            <div class="d-flex align-items-center gap-2">
+              <input type="text" name="연락처1" class="form-control text-center" maxlength="3" required>
+              <span>-</span>
+              <input type="text" name="연락처2" class="form-control text-center" maxlength="4" required>
+              <span>-</span>
+              <input type="text" name="연락처3" class="form-control text-center" maxlength="4" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+          <label class="col-md-2 fw-bold">이메일 <span class="text-danger">*</span></label>
+          <div class="col-md-10">
+            <input type="email" name="이메일" class="form-control" placeholder="이메일을 입력하세요" required>
+          </div>
+        </div>
+
+        <div class="row mb-3 align-items-center">
+          <label class="col-md-2 fw-bold">제목 <span class="text-danger">*</span></label>
+          <div class="col-md-10">
+            <input type="text" name="제목" class="form-control" placeholder="제목을 입력하세요" required>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <label class="col-md-2 fw-bold mt-2">내용</label>
+          <div class="col-md-10">
+            <textarea name="내용" class="form-control" rows="8" placeholder="내용을 입력하세요"></textarea>
+          </div>
+        </div>
+
+<!-- <div class="row mb-4 align-items-center">
+  <label class="col-md-2 fw-bold">파일첨부</label>
+  <div class="col-md-10">
+    <input type="file" class="form-control d-none" id="fileInput" name="attachment">
+    <button type="button" class="btn btn-secondary px-4" onclick="document.getElementById('fileInput').click()">
+      업로드 <i class="fas fa-upload ms-1"></i>
+    </button>
+    <span id="fileName" class="ms-2 text-muted small">선택된 파일 없음</span>
+    <span id="fileLink" class="ms-2 text-primary small"></span>
+  </div>
+</div> -->
+
+
+        <hr class="my-5">
+
+        <div class="privacy-container mb-4">
+          <p class="fw-bold mb-2">개인정보 수집 및 이용에 대한 안내</p>
+          <div class="privacy-box p-3 border bg-white mb-3" style="height: 150px; overflow-y: scroll; font-size: 0.85rem; color: #555; line-height: 1.6;">
+            1. 정보수집의 이용 목적<br>
+            회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
+            ° 회원 관리<br>
+            - 회원제 서비스 이용에 따른 본인확인<br><br>
+            2. 수집/이용 항목<br>
+            ° 수집항목 : 이름, 이메일, 전화번호, 제목, 문의 내용, 첨부파일 등<br>
+            ° 개인정보 수집방법 : 홈페이지(견적문의)<br><br>
+            3. 회사는 필요하다고 인정되는 경우 이 약관을 개정할 수 있으며 변경된 약관은 제 1 항과 같은 방법으로 효력을 발생합니다.
+          </div>
+          <div class="form-check d-flex align-items-center gap-2">
+            <input class="form-check-input" type="checkbox" id="privacyAgree">
+            <label class="form-check-label small fw-bold" for="privacyAgree">
+              개인정보 수집 및 이용에 동의합니다.
+            </label>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <button type="submit" class="btn btn-dark btn-lg px-5 py-3" style="background-color: #333; border: none; min-width: 200px;">문의하기</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 text-center text-white">
+    <div class="container small">
+      <p class="mb-1">(주)일건 | 대표: 이정희 | 충북 청주시 서원구 남이면 3순환로 427 </p>
+      <p class="mb-0">TEL: 043-212-1136 | FAX: 02-765-4321 | 사업자번호: 123-45-67890</p>
+      <p class="mt-2 mb-0">ⓒ 2025 Ilgun Co., Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // 1. 갤러리 슬라이더
+    new Swiper('.gallerySwiper', {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: { delay: 2500, disableOnInteraction: false },
+    });
+
+    // 2. 탭 전환 기능
+    function showType(type) {
+      const mechSection = document.getElementById('download-mechanical');
+      const itSection = document.getElementById('download-it');
+      const mechBtn = document.getElementById('btn-mech');
+      const itBtn = document.getElementById('btn-it');
+
+      if (type === 'mechanical') {
+        mechSection.style.display = 'block';
+        itSection.style.display = 'none';
+        mechBtn.classList.add('active');
+        itBtn.classList.remove('active');
+      } else {
+        mechSection.style.display = 'none';
+        itSection.style.display = 'block';
+        mechBtn.classList.remove('active');
+        itBtn.classList.add('active');
+      }
+    }
+
+    // 3. 파일 이름 표시
+    document.getElementById('fileInput').addEventListener('change', function(){
+      const fileName = this.files[0] ? this.files[0].name : "선택된 파일 없음";
+      document.getElementById('fileName').textContent = fileName;
+    });
+
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  // 1. EmailJS 초기화
+  (function(){
+    emailjs.init("z5yKQtpmMikrKfh_3"); // Public Key
+  })();
+
+  // 2. 폼 제출 이벤트
+  document.getElementById('contactForm').addEventListener('submit', function(event){
+    event.preventDefault();
+
+    // 개인정보 동의 체크
+    const agreeCheckbox = document.getElementById('privacyAgree');
+    if (!agreeCheckbox || !agreeCheckbox.checked) {
+      alert("개인정보 수집 및 이용에 동의해야 합니다.");
+      return;
+    }
+
+    const form = this;
+    const phone = form.연락처1.value + "-" + form.연락처2.value + "-" + form.연락처3.value;
+
+    // EmailJS 템플릿의 {{변수}}와 정확히 일치시켜야 합니다.
+    const templateParams = {
+      company: form.업체.value,
+      name: form.성명.value,       // {{name}}
+      title: form.제목.value,      // {{title}}
+      subject: form.제목.value,    // 혹시 모르니 유지
+      user_email: form.이메일.value,
+      phone: phone,
+      message: form.내용.value,
+      user_name: form.성명.value   // {{user_name}}
+    };
+
+    // 전송 중임을 알림 (버튼 비활성화 등)
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.innerText = "전송 중...";
+    submitBtn.disabled = true;
+
+    // 3. EmailJS 전송 (Dropbox 부분은 에러 방지를 위해 일단 제외)
+    emailjs.send("service_6kvz57w", "template_8l45lz5", templateParams)
+      .then(function() {
+        alert("문의가 성공적으로 전송되었습니다!");
+        form.reset();
+        submitBtn.innerText = "문의하기";
+        submitBtn.disabled = false;
+      }, function(error) {
+        console.error("EmailJS Error:", error);
+        alert("전송 실패: " + JSON.stringify(error));
+        submitBtn.innerText = "문의하기";
+        submitBtn.disabled = false;
+      });
+  });
+</script>
+
+
+</body>
+</html>
