@@ -562,9 +562,14 @@ footer {
   border-color: #0078ff;
 }
 /* 전체 컨테이너 폭 통일 */
-.container {
+/* .container {
   max-width: 1200px !important;
+} */
+ .container {
+  max-width: 90%; /* 화면 폭의 90%만 사용 */
+  width: 100%;
 }
+
 .navbar .nav-link.active {
   color: #007bff !important;        /* 파란색 */
 }

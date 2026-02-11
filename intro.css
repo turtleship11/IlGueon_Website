@@ -40,8 +40,10 @@ body {
 
 /* 전체 컨테이너 폭 통일 */
 .container {
-  max-width: 1200px !important;
+  max-width: 90%; /* 화면 폭의 90%만 사용 */
+  width: 100%;
 }
+
 
 /* 메인 타이틀 및 이미지 */
 .visual-header .sub-text { color: #888; font-size: 0.95rem; margin-bottom: 5px; }

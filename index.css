@@ -404,8 +404,12 @@ footer {
 
 
 /* 🔥 모든 페이지 컨테이너 폭 통일 */
-.container {
+/* .container {
   max-width: 1200px !important;
+} */
+.container {
+  max-width: 90%; /* 화면 폭의 90%만 사용 */
+  width: 100%;
 }
 
 /* ================= 인증현황 섹션 ================= */
@@ -621,3 +625,5 @@ footer {
     display: inline-block;
   }
 }
+
+

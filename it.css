@@ -302,11 +302,12 @@ footer {
 }
 
 
-
 /* 전체 컨테이너 폭 통일 */
 .container {
-  max-width: 1200px !important;
+  max-width: 90%; /* 화면 폭의 90%만 사용 */
+  width: 100%;
 }
+
 /* 표 헤더 배경색 (옅은 하늘색) */
 .bg-sky {
   background-color: #eef7ff !important;
