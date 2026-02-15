@@ -318,3 +318,17 @@ footer {
   }
 }
 
+@media (min-width: 1920px) {
+  .featured-img{
+    max-width: 1400px !important;
+
+  }
+  .highlight{
+    max-width: 1400px !important;
+  }
+  .full-message-natural
+  {
+    max-width: 1200px !important;
+    font-size: 1.3rem !important;
+  }
+}

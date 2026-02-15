@@ -660,3 +660,19 @@ footer {
   }
 }
 
+@media (min-width: 1920px) {
+
+  #main-visual .container{
+    transform: translateY(-250px);
+  }
+  .lead{
+    font-size: 1.5rem !important;
+  }
+  #main-visual .services-panel{
+    max-width: 1100px;
+    transform: translateY(600px);
+  }
+  #gallery img{
+    height: 400px !important;
+  }
+}
